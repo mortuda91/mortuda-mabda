@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوحدة الثالثة: الدرس الثالث - الحديث الشريف - منصة المبدأ التعليمية</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        /* تنسيقات خاصة بصفحات الدروس لتحسين عرض المحتوى من الصور */
+        .lesson-content h2 {
+            text-align: center;
+            color: var(--brown);
+            font-size: 2.5em;
+            margin-bottom: 20px; /* تقليل المسافة بعد العنوان الرئيسي */
+            border-bottom: 3px solid var(--orange);
+            padding-bottom: 15px;
+            background-color: var(--light-green); /* خلفية خضراء فاتحة لعنوان الدرس */
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block; /* لجعل الخلفية تحيط بالنص فقط */
+            margin-right: auto;
+            margin-left: auto;
+            position: relative;
+            top: -10px; /* لرفعه قليلاً عن الهامش العلوي للقسم */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .lesson-content h3 {
+            color: var(--brown);
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            text-align: center; /* عنوان فرعي في المنتصف */
+            border-bottom: 2px solid var(--light-green);
+            padding-bottom: 10px;
+        }
+
+        .question-answer-section {
+            background-color: #fcfcfc;
+            border: 2px solid var(--light-green);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .question-answer-section p {
+            margin-bottom: 10px;
+            line-height: 1.8;
+            font-size: 1.15em;
+            color: var(--black);
+            text-align: justify; /* محاذاة النص لكلا الجانبين */
+        }
+
+        .question-answer-section p strong {
+            color: var(--brown); /* لون بني للسؤال (س: ) والجواب (جـ: ) */
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .question-answer-section p span.question-prefix {
+            color: var(--orange); /* لون برتقالي لرمز السؤال "س:" */
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .question-answer-section p span.answer-prefix {
+            color: var(--light-green); /* لون أخضر فاتح لرمز الجواب "جـ:" */
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        /* تنسيقات الحديث الشريف */
+        .hadith-text {
+            font-family: 'Rakkas', serif; /* خط مميز للحديث */
+            font-size: 1.6em;
+            color: var(--dark-green);
+            text-align: center;
+            margin: 30px auto;
+            padding: 20px;
+            border: 1px dashed var(--orange);
+            border-radius: 10px;
+            background-color: #f0fff0;
+            line-height: 1.8;
+        }
+
+        /* تنسيقات أزرار التنقل */
+        .lesson-navigation {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid var(--light-green);
+        }
+
+        .lesson-navigation button {
+            background-color: var(--orange);
+            color: var(--white);
+            border: none;
+            padding: 12px 25px;
+            margin: 0 15px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .lesson-navigation button:hover {
+            background-color: var(--brown);
+            transform: translateY(-2px);
+        }
+
+        .lesson-navigation button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="platform-title">منصة المبدأ التعليمية</h1>
+        <p class="platform-tagline">هذه المنصة خاصة بمادة التربية الإسلامية للصف الخامس الابتدائي</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../../index.html#home">الرئيسية</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">الوحدات الدراسية ▾</a>
+                <div class="dropdown-content">
+                    <div class="unit-section">
+                        <h4>الوحدة الأولى</h4>
+                        <a href="../unit1/lesson1.html">الدرس الأول</a>
+                        <a href="../unit1/lesson2.html">الدرس الثاني</a>
+                        <a href="../unit1/lesson3.html">الدرس الثالث</a>
+                        <a href="../unit1/lesson4.html">الدرس الرابع</a>
+                        <a href="../unit1/lesson5.html">الدرس الخامس</a>
+                    </div>
+                    <div class="unit-section">
+                        <h4>الوحدة الثانية</h4>
+                        <a href="../unit2/lesson1.html">الدرس الأول</a>
+                        <a href="../unit2/lesson2.html">الدرس الثاني</a>
+                        <a href="../unit2/lesson3.html">الدرس الثالث</a>
+                        <a href="../unit2/lesson4.html">الدرس الرابع</a>
+                        <a href="../unit2/lesson5.html">الدرس الخامس</a>
+                    </div>
+                    <div class="unit-section">
+                        <h4>الوحدة الثالثة</h4>
+                        <a href="../unit3/lesson1.html">الدرس الأول</a>
+                        <a href="../unit3/lesson2.html">الدرس الثاني</a>
+                        <a href="../unit3/lesson3.html">الدرس الثالث</a>
+                        <a href="../unit3/lesson4.html">الدرس الرابع</a>
+                        <a href="../unit3/lesson5.html">الدرس الخامس</a>
+                    </div>
+                     <div class="unit-section">
+                        <h4>الوحدة الرابعة</h4>
+                        <a href="../../units/unit4/lesson1.html">الدرس الأول</a>
+                        <a href="../../units/unit4/lesson2.html">الدرس الثاني</a>
+                        <a href="../../units/unit4/lesson3.html">الدرس الثالث</a>
+                        <a href="../../units/unit4/lesson4.html">الدرس الرابع</a>
+                        <a href="../../units/unit4/lesson5.html">الدرس الخامس</a>
+                    </div>
+                     <div class="unit-section">
+                        <h4>الوحدة الخامسة</h4>
+                        <a href="../../units/unit5/lesson1.html">الدرس الأول</a>
+                        <a href="../../units/unit5/lesson2.html">الدرس الثاني</a>
+                        <a href="../../units/unit5/lesson3.html">الدرس الثالث</a>
+                        <a href="../../units/unit5/lesson4.html">الدرس الرابع</a>
+                        <a href="../../units/unit5/lesson5.html">الدرس الخامس</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="../../index.html#exams">الاختبارات</a></li>
+            <li><a href="../../index.html#register">التسجيل</a></li>
+            <li><a href="../../index.html#login">تسجيل الدخول</a></li>
+            <li><a href="../../index.html#contact">اتصل بنا</a></li>
+            <li><a href="../../index.html#about">عن المنصة</a></li>
+            <li><a href="../../index.html#videos">الفيديوهات التعليمية</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="lesson-content">
+            <h2>الدرس الثالث : من الحديث الشريف</h2>
+            <h3>" في النهي عن الكذب "</h3>
+
+            <p class="hadith-text">
+                قال رسول الله (ص) : <span style="color: var(--orange);">( إياكم والكذب ... صدق رسول الله (ص) )</span>
+            </p>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س /</span> ما هو الكذب ؟</p>
+                <p><span class="answer-prefix">جـ /</span> هو عدم مطابقة الخبر للواقع ، وهو نقيض الصدق .</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س /</span> ما هي صفات الرسل والانبياء ؟</p>
+                <p><span class="answer-prefix">جـ /</span> اتصف جميع الرسل والانبياء "ع" بـ الصدق .</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س /</span> ما صفات <span style="color: var(--orange);">الزهراء</span> و <span style="color: var(--light-green);">مادح</span> <span style="color: var(--brown);">الله</span> تعالى للصادقين ؟</p>
+                <p><span class="answer-prefix">جـ /</span> ـ الصدق صفة محبوبة وفضيلة يجب على كل مسلم ان يتحلى بها.</p>
+                <p>ـ لقد وعد الله الصادقين بيتاً في الجنة يتلذذ المؤمنين فيها بنعيمها وخيراتها.</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س /</span> ما صفات الكفار والمنافقين ؟</p>
+                <p><span class="answer-prefix">جـ /</span> الكذب من صفات الكفار والمنافقين الذين يقولون بالسنتهم ما ليس في قلوبهم .</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س /</span> هل يجوز القسم في الكذب ؟</p>
+                <p><span class="answer-prefix">جـ /</span> كلا ، إن من اعظم الكذب ان تقسم بالله وانت كاذب فالقسم امر عظيم لا يجب القيام به إلا لضرورة كبيرة .</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س /</span> ما هي عواقب الكذب ؟</p>
+                <p><span class="answer-prefix">جـ /</span> ان الكذاب من الصفات الشيطانية فكذاب، الاتفاق وقد نهى عنة الله تعالى ورسولة لأن الكذاب سيعاقب عقاب شديد .</p>
+                <p>واجتماعهم وكان يكذب به واحد وسيحدث عنه الجميع وسيخادعه الله تعالى في الآخرة اليهود ويخونه ويكونون جزاءه النار وسوء المصير .</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س /</span> ما هي قصة الولد الكذوب ؟</p>
+                <p><span class="answer-prefix">جـ /</span> يحكى أن ولداً كذوباً كان يسرح في نهر فاراد ان يسخر باصدقائه ويضحك منهم فاخذ يصرخ ويدعي انه يغرق ليغووا الأصدقاء مع شخص الناس فادارة من شهر فضحكوا منهوا وذهبوا عنه فلما أضحك منهم كذبهم (انه كان يسفر ملفق وهي يوم احد) اخذ بوقوع هذا الكذب في مرة كثرة اخرى لكنه عاد ولم يستطيع اعمال الصيحة فيما ينادي على اصدقائه لكي يغرقوا انه يسفر ملفق هم يستجيبوا الى نادات الغرق ويصدقون كذبه .</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س /</span> هل يجوز الكذب في المزاح ؟</p>
+                <p><span class="answer-prefix">جـ /</span> كلا ، لا يجوز ذلك لأن الكذب خطر وعواقبه وخيمة فعلينا التزام الصدق في اقوالنا وافعالنا لتنال رضا الناس وحبهم واحترامهم وتنال رضا الله تعالى ورسوله وتنجوا من الهلاك .</p>
+            </div>
+
+        </section>
+
+        <div class="lesson-navigation">
+            <button onclick="location.href='lesson2.html'">الدرس السابق</button>
+            <button onclick="location.href='../../index.html#units'">العودة للوحدات</button>
+            <button onclick="location.href='lesson4.html'">الدرس التالي</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>إعداد وإشراف الأستاذ مرتضى الخفاجي</p>
+    </footer>
+
+    </body>
+</html>

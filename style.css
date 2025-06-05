@@ -1,0 +1,287 @@
+﻿/*
+    ملف: style.css
+    المسار: your-educational-platform/css/style.css
+    هذا الملف يحتوي على جميع التنسيقات البصرية للمنصة التعليمية.
+*/
+
+/* 1. تعريف الخطوط المخصصة */
+/*
+    هذا الجزء يخبر المتصفح بكيفية الوصول إلى ملفات الخطوط المخصصة التي حملتها.
+    تأكد أن أسماء الملفات هنا تتطابق تماماً مع الأسماء الموجودة في مجلد 'fonts/'.
+*/
+@font-face {
+    font-family: 'DMSerifText'; /* اسم العائلة الذي سنستخدمه في CSS */
+    src: url('../fonts/DMSerifText-Regular.ttf') format('truetype'); /* المسار ونوع الملف */
+    font-weight: normal; /* هذا النمط للنسخة العادية من الخط */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DMSerifText'; /* نفس اسم العائلة */
+    src: url('../fonts/DMSerifText-Italic.ttf') format('truetype'); /* المسار ونوع الملف للنسخة المائلة */
+    font-weight: normal;
+    font-style: italic; /* تحديد أنه نمط مائل */
+}
+
+@font-face {
+    font-family: 'Rakkas'; /* اسم العائلة للخط العربي Rakkas */
+    src: url('../fonts/Rakkas-Regular.ttf') format('truetype'); /* المسار ونوع الملف */
+    font-weight: normal; /* هذا النمط للنسخة العادية (Rakkas عادةً لا يأتي بـ Bold مدمج) */
+    font-style: normal;
+}
+
+
+/* 2. الألوان الرئيسية للمنصة (متغيرات CSS لتسهيل التغيير المستقبلي) */
+:root {
+    --light-green: #A7D9A7; /* أخضر فاتح للمناطق الرئيسية مثل الهيدر */
+    --black: #000000;       /* أسود للنصوص والخلفيات الداكنة */
+    --orange: #FFA500;      /* أورنج للعناصر البارزة والحركات */
+    --brown: #8B4513;       /* بني للعناوين والنصوص الهامة */
+    --white: #FFFFFF;       /* أبيض لخلفيات المحتوى وبعض النصوص */
+    --light-gray: #f0f0f0;  /* رمادي فاتح للخلفية العامة للجسم */
+}
+
+/* 3. التنسيقات العامة للجسم والخطوط الأساسية */
+body {
+    font-family: 'DMSerifText', Arial, sans-serif; /* الخط الأساسي للمنصة (DMSerifText) مع بديل */
+    margin: 0; /* إزالة الهوامش الافتراضية للمتصفح */
+    padding: 0; /* إزالة الحشوة الافتراضية للمتصفح */
+    direction: rtl; /* ضبط اتجاه النص من اليمين لليسار للعربية */
+    background-color: var(--light-gray); /* خلفية رمادية فاتحة للجسم */
+    color: var(--black); /* لون النص الافتراضي أسود */
+    line-height: 1.6; /* مسافة مناسبة بين الأسطر لسهولة القراءة */
+    font-size: 16px; /* حجم الخط الأساسي لمعظم النصوص */
+}
+
+/* 4. رأس الصفحة (Header) - يحتوي على اسم المنصة والعبارة التوضيحية */
+header {
+    background-color: var(--light-green); /* أخضر فاتح للخلفية */
+    color: var(--black); /* لون النص أسود */
+    padding: 20px 0; /* حشوة داخلية أعلى وأسفل */
+    text-align: center; /* توسيط المحتوى */
+    border-bottom: 8px solid var(--orange); /* شريط برتقالي سميك ومميز أسفل الهيدر */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل خفيف لإبراز الهيدر */
+    position: relative; /* ضروري إذا أردنا إضافة حركات أو عناصر مطلقة لاحقاً */
+}
+
+.platform-title {
+    font-family: 'Rakkas', serif; /* استخدام خط Rakkas لاسم المنصة لتميزه */
+    font-size: 3.5em; /* حجم كبير جداً لجذب الانتباه */
+    font-weight: normal; /* Rakkas-Regular هو النمط العادي منه */
+    color: var(--brown); /* لون بني لاسم المنصة */
+    margin-bottom: 5px; /* مسافة أسفل الاسم */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* ظل للنص ليبرز أكثر */
+}
+
+.platform-tagline {
+    font-size: 1.4em; /* حجم مناسب للعبارة التوضيحية */
+    font-weight: bold; /* خاصية بولد */
+    color: var(--black); /* لون أسود */
+    margin-top: 0; /* إزالة المسافة العلوية الافتراضية */
+}
+
+/* 5. شريط التنقل (Navigation Bar) - يحتوي على روابط الأقسام الرئيسية */
+nav {
+    background-color: var(--black); /* خلفية سوداء للشريط */
+    padding: 10px 0; /* حشوة داخلية */
+    text-align: center; /* توسيط الروابط */
+}
+
+nav ul {
+    list-style: none; /* إزالة النقاط من القائمة */
+    padding: 0; /* إزالة الحشوة الافتراضية */
+    margin: 0; /* إزالة الهوامش الافتراضية */
+    display: flex; /* لعرض عناصر القائمة أفقياً */
+    justify-content: center; /* توسيط العناصر داخل الشريط */
+    flex-wrap: wrap; /* للسماح للعناصر بالنزول لأسطر جديدة في الشاشات الصغيرة */
+}
+
+nav ul li {
+    position: relative; /* ضروري لتحديد موقع القائمة المنسدلة */
+    margin: 0 15px; /* مسافة بين عناصر القائمة */
+}
+
+nav ul li a {
+    color: var(--light-green); /* لون أخضر فاتح للروابط */
+    text-decoration: none; /* إزالة الخط تحت الروابط */
+    font-weight: bold; /* جعل النص بولد */
+    font-size: 1.2em; /* حجم أكبر للروابط */
+    padding: 10px 18px; /* حشوة داخلية للروابط */
+    display: block; /* لجعل الرابط يملأ المساحة ويستقبل النقر بشكل أفضل */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* حركات ناعمة عند التفاعل */
+    border-radius: 25px; /* لجعل الروابط ذات شكل دائري جذاب ومناسب للأطفال */
+    overflow: hidden; /* لإخفاء أي عناصر تتجاوز الحدود (مهم للحركة التالية) */
+    position: relative; /* لتحديد موقع العناصر الداخلية للحركة */
+    z-index: 1; /* للتأكد من أن النص يظهر فوق حركة الخلفية */
+}
+
+/* حركة جذابة عند المرور على روابط التنقل (تظهر خلفية برتقالية) */
+nav ul li a::before {
+    content: ''; /* عنصر وهمي لإنشاء الحركة */
+    position: absolute; /* تحديد موقعه بالنسبة للرابط */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--orange); /* اللون البرتقالي للحركة */
+    transform: scaleX(0); /* إخفاء العنصر أفقياً في البداية */
+    transform-origin: left; /* نقطة الأصل للتكبير من اليسار */
+    transition: transform 0.3s ease-in-out; /* حركة ناعمة */
+    z-index: -1; /* لجعل هذه الخلفية تظهر خلف نص الرابط */
+}
+
+nav ul li a:hover::before {
+    transform: scaleX(1); /* تظهر الخلفية وتتمدد بالكامل عند المرور */
+}
+
+nav ul li a:hover {
+    color: var(--black); /* يتغير لون النص إلى الأسود عند المرور */
+    transform: translateY(-3px); /* حركة رفع بسيطة للرابط */
+}
+
+/* تنسيق القائمة المنسدلة للوحدات الدراسية */
+.dropdown-content {
+    display: none; /* إخفاء القائمة المنسدلة افتراضياً */
+    position: absolute; /* لتطفو فوق المحتوى الآخر */
+    background-color: var(--brown); /* خلفية بنية للقائمة */
+    min-width: 250px; /* عرض أدنى للقائمة */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4); /* ظل لإبراز القائمة */
+    z-index: 10; /* لجعلها تظهر فوق كل شيء آخر */
+    right: 0; /* ضبط موقعها لليمين (لأن الاتجاه RTL) */
+    border-radius: 8px; /* حواف دائرية */
+    padding: 10px 0; /* حشوة داخلية */
+    animation: fadeIn 0.4s ease-out; /* حركة ظهور ناعمة */
+}
+
+.dropdown-content .unit-section {
+    padding: 8px 15px; /* حشوة لكل قسم وحدة داخل القائمة المنسدلة */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* فاصل خفيف بين أقسام الوحدات */
+}
+
+.dropdown-content .unit-section:last-child {
+    border-bottom: none; /* إزالة الفاصل من آخر قسم وحدة */
+}
+
+.dropdown-content h4 {
+    color: var(--orange); /* لون برتقالي لعنوان الوحدة (مثلاً: الوحدة الأولى) */
+    margin: 5px 0; /* مسافات حول العنوان */
+    font-size: 1.1em; /* حجم مناسب للعنوان */
+    text-align: right; /* محاذاة لليمين */
+    font-weight: bold; /* جعل العنوان بولد */
+    border-bottom: 2px solid var(--orange); /* خط برتقالي تحت عنوان الوحدة */
+    padding-bottom: 5px; /* مسافة بين العنوان والخط */
+    margin-bottom: 10px; /* مسافة أسفل العنوان */
+}
+
+.dropdown-content a {
+    color: var(--white); /* لون أبيض لروابط الدروس */
+    padding: 8px 20px; /* حشوة داخلية لروابط الدروس */
+    text-decoration: none; /* إزالة الخط تحت الروابط */
+    display: block; /* لجعل الرابط يملأ المساحة ويستقبل النقر بشكل أفضل */
+    text-align: right; /* محاذاة لليمين */
+    font-size: 1em; /* حجم الخط */
+    transition: background-color 0.2s ease, color 0.2s ease; /* حركة ناعمة عند التفاعل */
+    border-radius: 5px; /* حواف دائرية للروابط */
+    margin: 3px 0; /* مسافة بين روابط الدروس */
+}
+
+.dropdown-content a:hover {
+    background-color: var(--light-green); /* أخضر فاتح عند المرور */
+    color: var(--brown); /* نص بني عند المرور */
+}
+
+/* إظهار القائمة المنسدلة عند المرور على عنصر القائمة الرئيسي "الوحدات الدراسية" */
+nav ul li.dropdown:hover .dropdown-content {
+    display: block; /* إظهار القائمة */
+}
+
+/* 6. المحتوى الرئيسي (Main) - المنطقة التي تحتوي على أقسام المحتوى المختلفة */
+main {
+    padding: 20px; /* حشوة داخلية */
+    max-width: 1200px; /* أقصى عرض للمحتوى الرئيسي */
+    margin: 30px auto; /* توسيط المحتوى وإضافة مسافة من الأعلى والأسفل */
+    background-color: var(--white); /* خلفية بيضاء */
+    border-radius: 12px; /* حواف أكثر دائرية */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* ظل أوضح */
+}
+
+section {
+    margin-bottom: 40px; /* مسافة بين الأقسام */
+    padding: 30px; /* حشوة داخلية للأقسام */
+    border: 2px solid var(--light-green); /* إطار أخضر فاتح حول الأقسام */
+    border-radius: 10px; /* حواف دائرية */
+    background-color: #fcfcfc; /* خلفية بيضاء خفيفة جداً للأقسام */
+}
+
+section h2 {
+    color: var(--brown); /* لون بني للعناوين الفرعية داخل الأقسام */
+    font-size: 2.2em; /* حجم أكبر للعناوين */
+    margin-bottom: 20px; /* مسافة أسفل العنوان */
+    text-align: center; /* توسيط العنوان */
+    border-bottom: 3px solid var(--orange); /* خط برتقالي تحت العنوان */
+    padding-bottom: 10px; /* مسافة بين العنوان والخط */
+    font-weight: bold; /* جعل العنوان بولد */
+}
+
+.contact-info p, .about-content p {
+    font-size: 1.2em; /* حجم خط أكبر للمحتوى النصي */
+    line-height: 1.8; /* مسافة أسطر أكبر لسهولة القراءة (مهم للأطفال) */
+    color: #333; /* لون نص داكن */
+    text-align: justify; /* محاذاة النص لكلا الجانبين لجعل المظهر مرتباً */
+}
+
+.contact-info a {
+    color: var(--orange); /* لون برتقالي لروابط الاتصال */
+    font-weight: bold; /* جعل النص بولد */
+    text-decoration: none; /* إزالة الخط تحت الروابط */
+    transition: color 0.3s ease; /* حركة ناعمة عند تغيير اللون */
+}
+
+.contact-info a:hover {
+    color: var(--brown); /* يتغير إلى البني عند المرور */
+    text-decoration: underline; /* يظهر خط تحت الرابط عند المرور */
+}
+
+/* تنسيق أيقونات الاتصال (مثل التيليجرام والهاتف) */
+.contact-info img {
+    vertical-align: middle; /* محاذاة الأيقونة مع النص */
+    width: 32px; /* حجم أكبر للأيقونات لتكون واضحة للأطفال */
+    height: 32px;
+    margin-left: 10px; /* مسافة بين الأيقونة والنص */
+}
+
+/* 7. تذييل الصفحة (Footer) */
+footer {
+    background-color: var(--black); /* خلفية سوداء للتذييل */
+    color: var(--light-green); /* لون أخضر فاتح لنص التذييل */
+    text-align: center; /* توسيط النص */
+    padding: 20px 0; /* حشوة داخلية */
+    font-size: 1.2em; /* حجم أكبر لنص التذييل */
+    font-weight: bold; /* جعل النص بولد */
+    margin-top: 50px; /* مسافة أكبر قبل التذييل */
+}
+
+/* 8. حركات CSS إضافية (لجذب الأطفال) */
+
+/* حركة ظهور تدريجي للأقسام عند تحميل الصفحة */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); } /* تبدأ مخفية وفوق قليلاً */
+    to { opacity: 1; transform: translateY(0); } /* تظهر بالكامل وتعود لمكانها */
+}
+
+/* حركة نبضية خفيفة لاسم المنصة لجذب الانتباه */
+@keyframes pulse {
+    0% { transform: scale(1); } /* تبدأ بالحجم الطبيعي */
+    50% { transform: scale(1.02); } /* تكبر قليلاً في المنتصف */
+    100% { transform: scale(1); } /* تعود للحجم الطبيعي */
+}
+
+/* تطبيق حركة الظهور على جميع الأقسام */
+section {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* تطبيق حركة النبض على عنوان المنصة الرئيسي */
+header h1 {
+    animation: pulse 2s infinite ease-in-out; /* تتكرر بلا نهاية مع حركة سلسة */
+}

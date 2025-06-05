@@ -1,0 +1,572 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة المبدأ التعليمية - التربية الإسلامية للصف الخامس الابتدائي</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* إضافة بعض التنسيقات الإضافية أو التعديلات إذا لزم الأمر */
+        #home {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: var(--light-green);
+            color: var(--brown);
+            margin-bottom: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        #home h2 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            color: var(--dark-green);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #home p {
+            font-size: 1.6em;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            color: var(--brown);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--orange);
+            color: var(--white);
+            padding: 15px 35px;
+            font-size: 1.5em;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background-color: var(--brown);
+            transform: translateY(-5px);
+        }
+
+        /* تنسيقات الأقسام العامة التي ستظهر بشكل منفصل بالـ JavaScript */
+        .full-width-section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: var(--light-bg);
+            margin-top: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            display: none; /* إخفاء جميع الأقسام افتراضياً، سيتم عرضها بواسطة JS */
+        }
+
+        /* تنسيقات خاصة بقسم "أسماء الله الحسنى" (#features) */
+        #features {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: var(--light-bg);
+            margin-top: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex !important; /* هذا القسم سيظهر مع #home، وسيكون flex لترتيب المحتوى */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px; /* لضمان ارتفاع مناسب لعرض الأسماء */
+        }
+
+        .full-width-section h2 {
+            font-size: 3em;
+            color: var(--brown);
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .full-width-section h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--orange);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        /* تنسيقات خاصة بقسم الفيديوهات التعليمية */
+        #videos .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        #videos .video-item {
+            background-color: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: right;
+            transition: transform 0.3s ease;
+        }
+
+        #videos .video-item:hover {
+            transform: translateY(-5px);
+        }
+
+        #videos .video-item iframe {
+            width: 100%;
+            height: 200px; /* ارتفاع ثابت للفيديو */
+            border: none;
+            border-bottom: 1px solid var(--border);
+        }
+
+        #videos .video-item .video-info {
+            padding: 20px;
+        }
+
+        #videos .video-item h4 {
+            font-size: 1.4em;
+            color: var(--dark-green);
+            margin-bottom: 10px;
+        }
+
+        #videos .video-item p {
+            font-size: 1em;
+            color: var(--gray-text);
+            line-height: 1.5;
+        }
+
+        /* تنسيقات الأقسام الأخرى مثل التسجيل وتسجيل الدخول والاتصال بنا */
+        #register .form-container,
+        #login .form-container,
+        #contact .form-container,
+        #about .about-content {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 30px auto;
+            text-align: right;
+        }
+
+        #register .form-container h3,
+        #login .form-container h3,
+        #contact .form-container h3 {
+            font-size: 2em;
+            color: var(--brown);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 1.1em;
+            color: var(--dark-green);
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="password"],
+        .form-group textarea {
+            width: calc(100% - 20px);
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 1em;
+            color: var(--black);
+            background-color: var(--light-bg);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-button {
+            background-color: var(--orange);
+            color: var(--white);
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            width: 100%;
+            margin-top: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .submit-button:hover {
+            background-color: var(--brown);
+            transform: translateY(-3px);
+        }
+
+        #about .about-content p {
+            font-size: 1.15em;
+            color: var(--gray-text);
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        /* تنسيقات أسماء الله الحسنى المتحركة */
+        .names-of-allah-container {
+            width: 100%;
+            overflow: hidden; /* لإخفاء الجزء الزائد من الأسماء وتفعيل التمرير */
+            padding: 30px 0;
+            background-color: var(--white);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .names-scroller {
+            display: flex; /* لجعل مجموعتي الأسماء جنباً إلى جنب */
+            width: fit-content; /* لكي يأخذ العرض المناسب لمحتواه */
+            animation: scroll-names 30s linear infinite; /* تحديد الحركة: 30 ثانية، خطية، تتكرر لا نهائياً */
+        }
+
+        .names-inner {
+            display: flex;
+            white-space: nowrap; /* لمنع الأسماء من النزول إلى سطر جديد */
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .names-inner span {
+            font-size: 3em; /* حجم الخط */
+            color: var(--dark-green);
+            margin: 0 30px; /* المسافة بين كل اسم والآخر */
+            display: inline-block;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+        }
+
+        @keyframes scroll-names {
+            from {
+                transform: translateX(0); /* تبدأ من الموضع الأصلي */
+            }
+            to {
+                transform: translateX(-50%); /* تتحرك بنسبة 50% من عرضها الإجمالي (مجموعة أسماء واحدة) لإنشاء التكرار السلس */
+            }
+        }
+
+        /* مسؤولية الاستجابة (Responsive Design) */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2em; }
+            header p { font-size: 1em; }
+            nav ul li a { padding: 10px 15px; font-size: 0.9em; }
+            #home h2 { font-size: 2.5em; }
+            #home p { font-size: 1.2em; }
+            .cta-button { padding: 12px 25px; font-size: 1.2em; }
+            .full-width-section { padding: 40px 20px; }
+            .full-width-section h2 { font-size: 2.5em; }
+            #videos .video-item iframe { height: 180px; }
+            #register .form-container,
+            #login .form-container,
+            #contact .form-container,
+            #about .about-content { padding: 30px; }
+            .form-group input, .form-group textarea { width: 100%; }
+
+            /* أسماء الله الحسنى - استجابة */
+            .names-inner span { font-size: 2.2em; margin: 0 20px; }
+            .names-of-allah-container { min-height: 120px; }
+        }
+
+        @media (max-width: 480px) {
+            header h1 { font-size: 1.8em; }
+            header p { font-size: 0.9em; }
+            nav ul li a { padding: 8px 10px; font-size: 0.8em; }
+            .dropdown-content { min-width: unset; left: 0; right: unset; width: 100%; }
+            .unit-section { padding: 10px; }
+            .unit-section h4 { font-size: 1.1em; }
+            .unit-section a { font-size: 0.9em; padding: 5px 10px; }
+            #home h2 { font-size: 2em; }
+            #home p { font-size: 1em; }
+            .cta-button { padding: 10px 20px; font-size: 1.1em; }
+            .full-width-section h2 { font-size: 2em; }
+            #videos .video-item iframe { height: 160px; }
+            #register .form-container,
+            #login .form-container,
+            #contact .form-container,
+            #about .about-content { padding: 20px; }
+            .submit-button { font-size: 1.1em; padding: 12px 25px; }
+
+            /* أسماء الله الحسنى - استجابة */
+            .names-inner span { font-size: 1.6em; margin: 0 10px; }
+            .names-of-allah-container { min-height: 100px; padding: 20px 0; }
+            .names-scroller { animation-duration: 20s; } /* حركة أسرع على الشاشات الصغيرة */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="platform-title">منصة المبدأ التعليمية</h1>
+        <p class="platform-tagline">هذه المنصة خاصة بمادة التربية الإسلامية للصف الخامس الابتدائي</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home" class="nav-link">الرئيسية</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">الوحدات الدراسية ▾</a>
+                <div class="dropdown-content">
+                    <div class="unit-section">
+                        <h4>الوحدة الأولى</h4>
+                        <a href="units/unit1/lesson1.html">الدرس الأول</a>
+                        <a href="units/unit1/lesson2.html">الدرس الثاني</a>
+                        <a href="units/unit1/lesson3.html">الدرس الثالث</a>
+                        <a href="units/unit1/lesson4.html">الدرس الرابع</a>
+                        <a href="units/unit1/lesson5.html">الدرس الخامس</a>
+                    </div>
+                    <div class="unit-section">
+                        <h4>الوحدة الثانية</h4>
+                        <a href="units/unit2/lesson1.html">الدرس الأول</a>
+                        <a href="units/unit2/lesson2.html">الدرس الثاني</a>
+                        <a href="units/unit2/lesson3.html">الدرس الثالث</a>
+                        <a href="units/unit2/lesson4.html">الدرس الرابع</a>
+                        <a href="units/unit2/lesson5.html">الدرس الخامس</a>
+                    </div>
+                    <div class="unit-section">
+                        <h4>الوحدة الثالثة</h4>
+                        <a href="units/unit3/lesson1.html">الدرس الأول</a>
+                        <a href="units/unit3/lesson2.html">الدرس الثاني</a>
+                        <a href="units/unit3/lesson3.html">الدرس الثالث</a>
+                        <a href="units/unit3/lesson4.html">الدرس الرابع</a>
+                        <a href="units/unit3/lesson5.html">الدرس الخامس</a>
+                    </div>
+                    <div class="unit-section">
+                        <h4>الوحدة الرابعة</h4>
+                        <a href="units/unit4/lesson1.html">الدرس الأول</a>
+                        <a href="units/unit4/lesson2.html">الدرس الثاني</a>
+                        <a href="units/unit4/lesson3.html">الدرس الثالث</a>
+                        <a href="units/unit4/lesson4.html">الدرس الرابع</a>
+                        <a href="units/unit4/lesson5.html">الدرس الخامس</a>
+                    </div>
+                    <div class="unit-section">
+                        <h4>الوحدة الخامسة</h4>
+                        <a href="units/unit5/lesson1.html">الدرس الأول</a>
+                        <a href="units/unit5/lesson2.html">الدرس الثاني</a>
+                        <a href="units/unit5/lesson3.html">الدرس الثالث</a>
+                        <a href="units/unit5/lesson4.html">الدرس الرابع</a>
+                        <a href="units/unit5/lesson5.html">الدرس الخامس</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="exams/index.html">الاختبارات</a></li>
+            <li><a href="#register" class="nav-link">التسجيل</a></li>
+            <li><a href="#login" class="nav-link">تسجيل الدخول</a></li>
+            <li><a href="#contact" class="nav-link">اتصل بنا</a></li>
+            <li><a href="#about" class="nav-link">عن المنصة</a></li>
+            <li><a href="#videos" class="nav-link">الفيديوهات التعليمية</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2>مرحباً بك في منصة المبدأ التعليمية</h2>
+            <p>منصتك المتكاملة لتعلم مادة التربية الإسلامية للصف الخامس الابتدائي. استكشف الدروس التفاعلية، حل الاختبارات، وعزز فهمك للدين الإسلامي.</p>
+            <a href="units/unit1/lesson1.html" class="cta-button">ابدأ التعلم الآن!</a>
+        </section>
+
+        <section id="features">
+            <div class="names-of-allah-container">
+                <div class="names-scroller">
+                    <div class="names-inner">
+                        <span>الله</span> <span>الرحمن</span> <span>الرحيم</span> <span>الملك</span> <span>القدوس</span> <span>السلام</span> <span>المؤمن</span> <span>المهيمن</span> <span>العزيز</span> <span>الجبار</span> <span>المتكبر</span> <span>الخالق</span> <span>البارئ</span> <span>المصور</span>
+                    </div>
+                    <div class="names-inner">
+                        <span>الله</span> <span>الرحمن</span> <span>الرحيم</span> <span>الملك</span> <span>القدوس</span> <span>السلام</span> <span>المؤمن</span> <span>المهيمن</span> <span>العزيز</span> <span>الجبار</span> <span>المتكبر</span> <span>الخالق</span> <span>البارئ</span> <span>المصور</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="videos" class="full-width-section">
+            <h2>فيديوهات تعليمية</h2>
+            <div class="video-grid">
+                <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h4>فيديو توضيحي للوضوء</h4>
+                        <p>شرح مبسط وواضح لخطوات الوضوء الصحيح.</p>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/your_video_id_2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h4>أهمية الصلاة في الإسلام</h4>
+                        <p>يتناول هذا الفيديو أهمية الصلاة ومكانتها في حياة المسلم.</p>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/your_video_id_3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h4>قصة الإمام علي (ع)</h4>
+                        <p>تعرف على حياة الإمام علي (عليه السلام) وشجاعته وفضائله.</p>
+                    </div>
+                </div>
+                </div>
+        </section>
+
+        <section id="register" class="full-width-section">
+            <h2>التسجيل</h2>
+            <div class="form-container">
+                <h3>سجل الآن لبدء رحلتك التعليمية</h3>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="registration_identifier">رقم الهاتف أو معرف التيليجرام:</label>
+                        <input type="text" id="registration_identifier" name="registration_identifier" placeholder="أدخل رقم الهاتف أو معرف التيليجرام" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">كلمة المرور:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="submit-button">تسجيل</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="login" class="full-width-section">
+            <h2>تسجيل الدخول</h2>
+            <div class="form-container">
+                <h3>ادخل إلى حسابك</h3>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="login_identifier">رقم الهاتف أو معرف التيليجرام:</label>
+                        <input type="text" id="login_identifier" name="login_identifier" placeholder="أدخل رقم الهاتف أو معرف التيليجرام" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">كلمة المرور:</label>
+                        <input type="password" id="login-password" name="login-password" required>
+                    </div>
+                    <button type="submit" class="submit-button">تسجيل الدخول</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="about" class="full-width-section">
+            <h2>عن المنصة</h2>
+            <div class="about-content">
+                <p>منصة المبدأ التعليمية هي مشروع تعليمي يهدف إلى تقديم محتوى منهاج التربية الإسلامية للصف الخامس الابتدائي بطريقة حديثة وتفاعلية. نؤمن بأن التعليم يجب أن يكون ممتعاً ومحفزاً، لذلك نقدم دروساً غنية، اختبارات متنوعة، وفيديوهات تعليمية لتلبية احتياجات طلابنا.</p>
+                <p>تم تصميم المنصة بعناية فائقة لضمان سهولة الاستخدام وتقديم تجربة تعليمية سلسة ومثمرة لجميع الطلاب.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="full-width-section">
+            <h2>تواصل معنا</h2>
+            <div class="form-container">
+                <h3>تواصل معنا لأي استفسارات</h3>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="contact-name">اسمك:</label>
+                        <input type="text" id="contact-name" name="contact-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">بريدك الإلكتروني:</label>
+                        <input type="email" id="contact-email" name="contact-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">رسالتك:</label>
+                        <textarea id="contact-message" name="contact-message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">إرسال الرسالة</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>إعداد وإشراف الأستاذ مرتضى الخفاجي</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('main section'); // حدد جميع الأقسام في main
+
+            // وظيفة لإخفاء جميع الأقسام
+            function hideAllSections() {
+                sections.forEach(section => {
+                    section.style.display = 'none';
+                });
+            }
+
+            // وظيفة لعرض قسم معين
+            function showSection(id) {
+                hideAllSections();
+                const targetSection = document.getElementById(id);
+                if (targetSection) {
+                    targetSection.style.display = 'block'; // أو 'flex' حسب التنسيق
+                    // إذا كان القسم هو 'home'، أظهر أيضاً قسم 'features'
+                    if (id === 'home') {
+                        document.getElementById('features').style.display = 'flex';
+                    }
+                }
+            }
+
+            // التعامل مع روابط شريط التنقل
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    // منع السلوك الافتراضي للانتقال إلى الـ hash مباشرة (الذي سيقوم بالتمرير)
+                    event.preventDefault();
+
+                    const targetId = this.getAttribute('href').substring(1); // احصل على الـ ID بدون #
+                    showSection(targetId);
+                });
+            });
+
+            // عند تحميل الصفحة لأول مرة، أظهر القسم الافتراضي (الرئيسية وأسماء الله الحسنى)
+            const initialHash = window.location.hash.substring(1);
+            if (initialHash && document.getElementById(initialHash)) {
+                showSection(initialHash);
+            } else {
+                showSection('home'); // افتراضياً، اعرض قسم الرئيسية عند تحميل الصفحة
+            }
+        });
+
+        // وظيفة إغلاق القائمة المنسدلة عند النقر خارجها
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.parentElement.classList.contains('dropdown') && openDropdown.style.display === "flex") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+
+        // وظيفة لتبديل عرض القائمة المنسدلة للوحدات
+        document.querySelector('.dropbtn').addEventListener('click', function(event) {
+            event.stopPropagation(); // منع انتشار النقر لمنع إغلاق القائمة المنسدلة فوراً
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "flex") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "flex";
+            }
+        });
+    </script>
+</body>
+</html>

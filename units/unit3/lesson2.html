@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوحدة الثالثة: الدرس الثاني - بشارات الأنبياء - منصة المبدأ التعليمية</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        /* تنسيقات خاصة بصفحات الدروس لتحسين عرض المحتوى من الصور */
+        .lesson-content h2 {
+            text-align: center;
+            color: var(--brown);
+            font-size: 2.5em;
+            margin-bottom: 20px; /* تقليل المسافة بعد العنوان الرئيسي */
+            border-bottom: 3px solid var(--orange);
+            padding-bottom: 15px;
+            background-color: var(--light-green); /* خلفية خضراء فاتحة لعنوان الدرس */
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block; /* لجعل الخلفية تحيط بالنص فقط */
+            margin-right: auto;
+            margin-left: auto;
+            position: relative;
+            top: -10px; /* لرفعه قليلاً عن الهامش العلوي للقسم */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .lesson-content h3 {
+            color: var(--brown);
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            text-align: center; /* عنوان فرعي في المنتصف */
+            border-bottom: 2px solid var(--light-green);
+            padding-bottom: 10px;
+        }
+
+        .question-answer-section {
+            background-color: #fcfcfc;
+            border: 2px solid var(--light-green);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .question-answer-section p {
+            margin-bottom: 10px;
+            line-height: 1.8;
+            font-size: 1.15em;
+            color: var(--black);
+            text-align: justify; /* محاذاة النص لكلا الجانبين */
+        }
+
+        .question-answer-section p strong {
+            color: var(--brown); /* لون بني للسؤال (س: ) والجواب (جـ: ) */
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .question-answer-section p span.question-prefix {
+            color: var(--orange); /* لون برتقالي لرمز السؤال "س:" */
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .question-answer-section p span.answer-prefix {
+            color: var(--light-green); /* لون أخضر فاتح لرمز الجواب "جـ:" */
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        /* تنسيقات الكلمات الملونة في الإجابات */
+        .highlight-red {
+            color: #d9534f; /* لون أحمر لتطابق الصورة */
+            font-weight: bold;
+        }
+        .highlight-green-text {
+            color: var(--light-green); /* لون أخضر لتطابق الصورة */
+            font-weight: bold;
+        }
+
+        /* تنسيقات أزرار التنقل */
+        .lesson-navigation {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid var(--light-green);
+        }
+
+        .lesson-navigation button {
+            background-color: var(--orange);
+            color: var(--white);
+            border: none;
+            padding: 12px 25px;
+            margin: 0 15px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .lesson-navigation button:hover {
+            background-color: var(--brown);
+            transform: translateY(-2px);
+        }
+
+        .lesson-navigation button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="platform-title">منصة المبدأ التعليمية</h1>
+        <p class="platform-tagline">هذه المنصة خاصة بمادة التربية الإسلامية للصف الخامس الابتدائي</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../../index.html#home">الرئيسية</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">الوحدات الدراسية ▾</a>
+                <div class="dropdown-content">
+                    <div class="unit-section">
+                        <h4>الوحدة الأولى</h4>
+                        <a href="../unit1/lesson1.html">الدرس الأول</a>
+                        <a href="../unit1/lesson2.html">الدرس الثاني</a>
+                        <a href="../unit1/lesson3.html">الدرس الثالث</a>
+                        <a href="../unit1/lesson4.html">الدرس الرابع</a>
+                        <a href="../unit1/lesson5.html">الدرس الخامس</a>
+                    </div>
+                    <div class="unit-section">
+                        <h4>الوحدة الثانية</h4>
+                        <a href="../unit2/lesson1.html">الدرس الأول</a>
+                        <a href="../unit2/lesson2.html">الدرس الثاني</a>
+                        <a href="../unit2/lesson3.html">الدرس الثالث</a>
+                        <a href="../unit2/lesson4.html">الدرس الرابع</a>
+                        <a href="../unit2/lesson5.html">الدرس الخامس</a>
+                    </div>
+                    <div class="unit-section">
+                        <h4>الوحدة الثالثة</h4>
+                        <a href="lesson1.html">الدرس الأول</a>
+                        <a href="lesson2.html">الدرس الثاني</a>
+                        <a href="lesson3.html">الدرس الثالث</a>
+                        <a href="lesson4.html">الدرس الرابع</a>
+                        <a href="lesson5.html">الدرس الخامس</a>
+                    </div>
+                     <div class="unit-section">
+                        <h4>الوحدة الرابعة</h4>
+                        <a href="../../units/unit4/lesson1.html">الدرس الأول</a>
+                        <a href="../../units/unit4/lesson2.html">الدرس الثاني</a>
+                        <a href="../../units/unit4/lesson3.html">الدرس الثالث</a>
+                        <a href="../../units/unit4/lesson4.html">الدرس الرابع</a>
+                        <a href="../../units/unit4/lesson5.html">الدرس الخامس</a>
+                    </div>
+                     <div class="unit-section">
+                        <h4>الوحدة الخامسة</h4>
+                        <a href="../../units/unit5/lesson1.html">الدرس الأول</a>
+                        <a href="../../units/unit5/lesson2.html">الدرس الثاني</a>
+                        <a href="../../units/unit5/lesson3.html">الدرس الثالث</a>
+                        <a href="../../units/unit5/lesson4.html">الدرس الرابع</a>
+                        <a href="../../units/unit5/lesson5.html">الدرس الخامس</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="../../index.html#exams">الاختبارات</a></li>
+            <li><a href="../../index.html#register">التسجيل</a></li>
+            <li><a href="../../index.html#login">تسجيل الدخول</a></li>
+            <li><a href="../../index.html#contact">اتصل بنا</a></li>
+            <li><a href="../../index.html#about">عن المنصة</a></li>
+            <li><a href="../../index.html#videos">الفيديوهات التعليمية</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="lesson-content">
+            <h2>الدرس الثاني : من العقيدة الإسلامية</h2>
+            <h3>" بشارات الأنبياء برسول الله ونبوة محمد (ص) "</h3>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س /</span> أي الأنبياء (عليهم السلام) بشر بنبوة رسول الله (ص)؟</p>
+                <p><span class="answer-prefix">جـ /</span> النبي موسى "ع" في التوراة، والنبي عيسى "ع" في الإنجيل.</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س /</span> ما معنى التوراة والإنجيل؟</p>
+                <p><span class="answer-prefix">جـ /</span> <span class="highlight-red">التوراة :</span> هو الكتاب المقدس الذي أنزل على النبي موسى "ع".</p>
+                <p><span class="highlight-red">الإنجيل :</span> هو الكتاب المقدس الذي أنزل على النبي عيسى "ع".</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س /</span> هل اعترف علماء اليهود بنبوة النبي محمد (ص) ؟</p>
+                <p><span class="answer-prefix">جـ /</span> لا ، إن علماء اليهود وكذلك النصارى كفروا هذه الحقائق وخبروها ولم يؤمنوا بالنبي محمد (ص) .</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س /</span> ما معنى ( معصوم ) ؟</p>
+                <p><span class="answer-prefix">جـ /</span> وهب الله تعالى أنبياءه (ص) مكارم الأخلاق وكان أفضل الناس في أصله وقوله وكان (معصوماً) أي لم يعمل عملاً خاطئاً طيلة حياته من طفولته حتى مماته أي مطهراً من الذنوب والمعاصي.</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س /</span> في أي عمر ابتدا نزول الوحي على محمد (ص) ؟</p>
+                <p><span class="answer-prefix">جـ /</span> حينما كان النبي محمد (ص) في الأربعين من عمره .</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س /</span> ما الآيات الأولى التي نزلت على الرسول (ص) ؟</p>
+                <p><span class="answer-prefix">جـ /</span> الآيات الخمسة الأولى من سورة العلق .</p>
+            </div>
+
+        </section>
+
+        <div class="lesson-navigation">
+            <button onclick="location.href='lesson1.html'">الدرس السابق</button>
+            <button onclick="location.href='../../index.html#units'">العودة للوحدات</button>
+            <button onclick="location.href='lesson3.html'">الدرس التالي</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>إعداد وإشراف الأستاذ مرتضى الخفاجي</p>
+    </footer>
+
+    </body>
+</html>

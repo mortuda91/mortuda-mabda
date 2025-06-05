@@ -1,0 +1,396 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوحدة الخامسة: الدرس الأول - سورة البلد - منصة المبدأ التعليمية</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        /* تنسيقات خاصة بصفحات الدروس لتحسين عرض المحتوى من الصور */
+        .lesson-content h2 {
+            text-align: center;
+            color: var(--brown);
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid var(--orange);
+            padding-bottom: 15px;
+            background-color: var(--light-green); /* خلفية خضراء فاتحة لعنوان الدرس */
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-right: auto;
+            margin-left: auto;
+            position: relative;
+            top: -10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-subtitle { /* لعنوان "الدرس الأول: من سورة البلد" أو "المعنى والمعوذات المناقشة" */
+            color: var(--brown);
+            font-size: 2em;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--light-green);
+            padding-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .bismillah {
+            font-family: 'Rakkas', serif;
+            font-size: 2.5em; /* حجم أكبر للبسملة */
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--dark-green);
+        }
+
+        .lesson-text-arabic {
+            font-family: 'Rakkas', serif; /* استخدام خط Rakkas للنص القرآني لجماله */
+            font-size: 1.8em; /* حجم كبير وواضح للنص القرآني */
+            line-height: 2; /* مسافة أسطر مناسبة للقراءة */
+            text-align: justify; /* محاذاة النص لكلا الجانبين */
+            color: var(--black);
+            background-color: #f9fff9; /* خلفية خضراء فاتحة جداً للنص القرآني */
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid var(--light-green);
+            margin-bottom: 40px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .word-meaning-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .word-meaning-table th, .word-meaning-table td {
+            border: 1px solid var(--light-green);
+            padding: 12px 15px;
+            text-align: right;
+        }
+
+        .word-meaning-table th {
+            background-color: var(--orange);
+            color: var(--white);
+            font-weight: bold;
+            text-align: center; /* توسيط عناوين الجدول */
+        }
+
+        .word-meaning-table tr:nth-child(even) {
+            background-color: #f2fcf2; /* لون خلفية للصفوف الزوجية */
+        }
+
+        .word-meaning-table td:first-child {
+            font-weight: bold; /* جعل الكلمات في العمود الأول بولد */
+            color: var(--brown);
+        }
+
+        .question-answer-section {
+            background-color: #fcfcfc;
+            border: 2px solid var(--light-green);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .question-answer-section p {
+            margin-bottom: 10px;
+            line-height: 1.8;
+            font-size: 1.15em;
+            color: var(--black);
+            text-align: justify;
+        }
+
+        .question-answer-section p span.question-prefix {
+            color: var(--orange);
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .question-answer-section p span.answer-prefix {
+            color: var(--light-green);
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        /* تنسيقات خاصة لأصحاب الميمنة والمشأمة */
+        .maymana-mashama {
+            background-color: #e9f9e9;
+            border: 2px solid #a8e6a8;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .maymana-mashama h4 {
+            color: var(--brown);
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #c9f9c9;
+            padding-bottom: 10px;
+        }
+        .maymana-mashama p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: var(--black);
+        }
+
+        /* تنسيقات أزرار التنقل */
+        .lesson-navigation {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid var(--light-green);
+        }
+
+        .lesson-navigation button {
+            background-color: var(--orange);
+            color: var(--white);
+            border: none;
+            padding: 12px 25px;
+            margin: 0 15px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .lesson-navigation button:hover {
+            background-color: var(--brown);
+            transform: translateY(-2px);
+        }
+
+        .lesson-navigation button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="platform-title">منصة المبدأ التعليمية</h1>
+        <p class="platform-tagline">هذه المنصة خاصة بمادة التربية الإسلامية للصف الخامس الابتدائي</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../../index.html#home">الرئيسية</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">الوحدات الدراسية ▾</a>
+                <div class="dropdown-content">
+                    <div class="unit-section">
+                        <h4>الوحدة الأولى</h4>
+                        <a href="../unit1/lesson1.html">الدرس الأول</a>
+                        <a href="../unit1/lesson2.html">الدرس الثاني</a>
+                        <a href="../unit1/lesson3.html">الدرس الثالث</a>
+                        <a href="../unit1/lesson4.html">الدرس الرابع</a>
+                        <a href="../unit1/lesson5.html">الدرس الخامس</a>
+                    </div>
+                    <div class="unit-section">
+                        <h4>الوحدة الثانية</h4>
+                        <a href="../unit2/lesson1.html">الدرس الأول</a>
+                        <a href="../unit2/lesson2.html">الدرس الثاني</a>
+                        <a href="../unit2/lesson3.html">الدرس الثالث</a>
+                        <a href="../unit2/lesson4.html">الدرس الرابع</a>
+                        <a href="../unit2/lesson5.html">الدرس الخامس</a>
+                    </div>
+                    <div class="unit-section">
+                        <h4>الوحدة الثالثة</h4>
+                        <a href="../unit3/lesson1.html">الدرس الأول</a>
+                        <a href="../unit3/lesson2.html">الدرس الثاني</a>
+                        <a href="../unit3/lesson3.html">الدرس الثالث</a>
+                        <a href="../unit3/lesson4.html">الدرس الرابع</a>
+                        <a href="../unit3/lesson5.html">الدرس الخامس</a>
+                    </div>
+                    <div class="unit-section">
+                        <h4>الوحدة الرابعة</h4>
+                        <a href="../unit4/lesson1.html">الدرس الأول</a>
+                        <a href="../unit4/lesson2.html">الدرس الثاني</a>
+                        <a href="../unit4/lesson3.html">الدرس الثالث</a>
+                        <a href="../unit4/lesson4.html">الدرس الرابع</a>
+                        <a href="../unit4/lesson5.html">الدرس الخامس</a>
+                    </div>
+                    <div class="unit-section">
+                        <h4>الوحدة الخامسة</h4>
+                        <a href="lesson1.html">الدرس الأول</a>
+                        <a href="lesson2.html">الدرس الثاني</a>
+                        <a href="lesson3.html">الدرس الثالث</a>
+                        <a href="lesson4.html">الدرس الرابع</a>
+                        <a href="lesson5.html">الدرس الخامس</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="../../index.html#exams">الاختبارات</a></li>
+            <li><a href="../../index.html#register">التسجيل</a></li>
+            <li><a href="../../index.html#login">تسجيل الدخول</a></li>
+            <li><a href="../../index.html#contact">اتصل بنا</a></li>
+            <li><a href="../../index.html#about">عن المنصة</a></li>
+            <li><a href="../../index.html#videos">الفيديوهات التعليمية</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="lesson-content">
+            <h2>الوحدة الخامسة</h2>
+            <h3 class="section-subtitle">الدرس الأول : من سورة البلد</h3>
+
+            <p class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+
+            <div class="lesson-text-arabic">
+                <p>لَا أُقْسِمُ بِهَٰذَا الْبَلَدِ ﴿1﴾ وَأَنتَ حِلٌّ بِهَٰذَا الْبَلَدِ ﴿2﴾ وَوَالِدٍ وَمَا وَلَدَ ﴿3﴾ لَقَدْ خَلَقْنَا الْإِنسَانَ فِي كَبَدٍ ﴿4﴾ أَيَحْسَبُ أَن لَّن يَقْدِرَ عَلَيْهِ أَحَدٌ ﴿5﴾ يَقُولُ أَهْلَكْتُ مَالًا لُّبَدًا ﴿6﴾ أَيَحْسَبُ أَن لَّمْ يَرَهُ أَحَدٌ ﴿7﴾ أَلَمْ نَجْعَل لَّهُ عَيْنَيْنِ ﴿8﴾ وَلِسَانًا وَشَفَتَيْنِ ﴿9﴾ وَهَدَيْنَاهُ النَّجْدَيْنِ ﴿10﴾ فَلَا اقْتَحَمَ الْعَقَبَةَ ﴿11﴾ وَمَا أَدْرَاكَ مَا الْعَقَبَةُ ﴿12﴾ فَكُّ رَقَبَةٍ ﴿13﴾ أَوْ إِطْعَامٌ فِي يَوْمٍ ذِي مَسْغَبَةٍ ﴿14﴾ يَتِيمًا ذَا مَقْرَبَةٍ ﴿15﴾ أَوْ مِسْكِينًا ذَا مَتْرَبَةٍ ﴿16﴾ ثُمَّ كَانَ مِنَ الَّذِينَ آمَنُوا وَتَوَاصَوْا بِالصَّبْرِ وَتَوَاصَوْا بِالْمَرْحَمَةِ ﴿17﴾ أُولَٰئِكَ أَصْحَابُ الْمَيْمَنَةِ ﴿18﴾ وَالَّذِينَ كَفَرُوا بِآيَاتِنَا هُمْ أَصْحَابُ الْمَشْأَمَةِ ﴿19﴾ عَلَيْهِمْ نَارٌ مُّؤْصَدَةٌ ﴿20﴾</p>
+            </div>
+
+            <h3 class="section-subtitle">معاني المفردات</h3>
+            <table class="word-meaning-table">
+                <thead>
+                    <tr>
+                        <th>الكلمة</th>
+                        <th>معناها</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>لا أقسم بهذا البلد</td>
+                        <td>أقسم بالبلد الحرام (مكة المكرمة)</td>
+                    </tr>
+                    <tr>
+                        <td>وأنت حل بهذا البلد</td>
+                        <td>حلال لك فيه ما تصنع يوم الفتح</td>
+                    </tr>
+                    <tr>
+                        <td>ووالد وما ولد</td>
+                        <td>آدم وذريته</td>
+                    </tr>
+                    <tr>
+                        <td>في كبد</td>
+                        <td>في تعب وشدة</td>
+                    </tr>
+                    <tr>
+                        <td>أيحسب أن لن يقدر</td>
+                        <td>أيظن ابن آدم أن لن يقدر عليه أحد</td>
+                    </tr>
+                    <tr>
+                        <td>مالاً لبداً</td>
+                        <td>مالاً كثيراً</td>
+                    </tr>
+                    <tr>
+                        <td>أيحسب أن لم يره أحد</td>
+                        <td>أيظن أنه لم يره أحد فالله يراه ويعلم ما أنفقه</td>
+                    </tr>
+                    <tr>
+                        <td>وهديناه النجدين</td>
+                        <td>بينا له طريق الخير وطريق الشر</td>
+                    </tr>
+                    <tr>
+                        <td>اقتحم العقبة</td>
+                        <td>اجتاز وعبر طريق الخير وطريق الشر</td>
+                    </tr>
+                    <tr>
+                        <td>فك رقبة</td>
+                        <td>تخليصها من الرق والعبودية</td>
+                    </tr>
+                    <tr>
+                        <td>بذي مسغبة</td>
+                        <td>ذو مجاعة شديدة</td>
+                    </tr>
+                    <tr>
+                        <td>يتيماً ذا مقربة</td>
+                        <td>يتيماً من الأقارب</td>
+                    </tr>
+                    <tr>
+                        <td>ذا متربة</td>
+                        <td>شديد الفقر</td>
+                    </tr>
+                    <tr>
+                        <td>مؤصدة</td>
+                        <td>مغلقة</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="section-subtitle">المعنى والمعوذات المناقشة</h3>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س /</span> لا أقسم بهذا البلد ﴿1﴾ وما هو البلد المقصود في الآية ؟</p>
+                <p><span class="answer-prefix">جـ /</span> الذي أقسم هو الله . والبلد المقصود هو مكة التي يسكنها محمد النبي (ص) وإبراهيم وزوجته عليهم السلام .</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س /</span> في هذه السورة مواساة لرسول الله (ص) والمؤمنين معه كيف ذلك ؟</p>
+                <p><span class="answer-prefix">جـ /</span> المواساة الذين كانوا يعذبون من الكفار والتأدب من كلام قريش ولا سيما المستضعفين منهم ممن جاءوا من أضطهاد قريش ونتائجهم فإنهم كانوا يواجهون ويعذبون بحياة الأيمان ومشكلوها وأن الراحة والسعادة هي في جنة الله .</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س /</span> أيكفّر بعض أصحاب المؤمنين الذين تضرروا بكلمات من المشركين ؟</p>
+                <p><span class="answer-prefix">جـ /</span> بيأس ووحدة وعذاب وقال الخطايا ومصيبات وحتى النبي (ص) لم يسلم من أذى المشركين .</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س /</span> ما هي العقبة ؟ وكيف تكون اجتيازها ؟</p>
+                <p><span class="answer-prefix">جـ /</span> العقبة : هي العمل الشاق على النفس ، واجتيازها يكون بالعمل الصالح .</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س /</span> هل يجتاز العقبة من كان كافراً ، حتى ولو أعتق رقبة مؤمن ؟ ولماذا ؟</p>
+                <p><span class="answer-prefix">جـ /</span> كلا ، لا يجتاز العقبة إلا من كان مؤمناً بالله لأن العمل الصالح هو الإيمان بالله تعالى .</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س /</span> أي بلد أشارت إليه السورة ؟ ومن آلم فيه ؟</p>
+                <p><span class="answer-prefix">جـ /</span> هي مكة ، وهي بلد النبي (ص) وكذلك النبي إبراهيم "ع" وذريته .</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س /</span> ما الذي نفهمه من هذه السورة .</p>
+                <p><span class="answer-prefix">جـ /</span> أن الحياة مليئة بالمتاعب والمشقة وأن الراحة لا تتحقق إلا في يوم الآخرة بعد الدخول للجنة وكذلك تبين الآيات أن الله تعالى سيكافأ على أعمالنا ومواجهة قلوبنا وأن آخران يوم القيامة والبعد عن نار جهنم لا يكون إلا بعد الإيمان بالله وبالرسول محمد (ص) والتواصي بالرحمة بين المؤمنين .</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س /</span> هل يظن الكافر أن لا يقدر عليه غيره ؟</p>
+                <p><span class="answer-prefix">جـ /</span> نعم يظن ذلك ، لأنه حينما يقوم بالأعمال المحرمة يعيها من آمن الناس فلا يعرف ذلك أحد أوأسي بأن الله لا يعرف عليه خافيه وامتلاكه تسجيل هذه الأعمال وسيصاب يوم القيامة على ذلك .</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س /</span> اذكر حديث النبي محمد (ص) يوصي بالتراحم بين الناس ، اذكره ؟</p>
+                <p><span class="answer-prefix">جـ /</span> قال رسول الله (ص) (من لا يرحم الناس لا يرحمه الله) .</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س /</span> قال تعالى (أولئك أصحاب الميمنة ﴿18﴾ والذين كفروا بآياتنا هم أصحاب المشأمة ﴿19﴾) من هم أصحاب الميمنة وأصحاب المشأمة ؟</p>
+                <p><span class="answer-prefix">جـ /</span></p>
+            </div>
+
+            <div class="maymana-mashama">
+                <h4>أصحاب الميمنة :</h4>
+                <p>ـ هم المؤمنين الذين يحفظون كتابهم يمينهم يوم القيامة ليدخلوا الجنة .</p>
+            </div>
+
+            <div class="maymana-mashama">
+                <h4>أصحاب المشأمة :</h4>
+                <p>ـ هم الكافرون أصحاب الشؤم الذين لم يصدقوا برسول الله (ص) فيعطون كتابهم في شمائلهم أي باليسار ليدخلوا نار جهنم .</p>
+            </div>
+
+
+        </section>
+
+        <div class="lesson-navigation">
+            <button onclick="location.href='../unit4/lesson5.html'">الدرس السابق</button>
+            <button onclick="location.href='../../index.html#units'">العودة للوحدات</button>
+            <button onclick="location.href='lesson2.html'">الدرس التالي</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>إعداد وإشراف الأستاذ مرتضى الخفاجي</p>
+    </footer>
+
+    </body>
+</html>

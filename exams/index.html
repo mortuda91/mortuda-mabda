@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الاختبارات - منصة المبدأ التعليمية</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* تنسيقات خاصة بصفحة الاختبارات */
+        main {
+            padding: 40px 20px;
+            background-color: var(--gray);
+            min-height: calc(100vh - 180px); /* لضمان أن المحتوى يملأ الصفحة تقريباً */
+            display: flex;
+            justify-content: flex-start; /* بدء المحتوى من الأعلى */
+            align-items: center; /* توسيط أفقي */
+            flex-direction: column;
+        }
+
+        .exams-header h1 {
+            text-align: center;
+            color: var(--brown);
+            font-size: 3em;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 4px solid var(--orange);
+            background-color: var(--light-green);
+            padding: 15px 30px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-right: auto;
+            margin-left: auto;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .exams-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px; /* المسافة بين بطاقات الاختبارات */
+            padding: 40px 0;
+            width: 100%; /* تأخذ العرض الكامل للمحتوى */
+            max-width: 1200px; /* أقصى عرض للقائمة */
+        }
+
+        .exam-card {
+            background-color: var(--white);
+            border: 2px solid var(--light-green);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            width: 300px; /* عرض ثابت لبطاقة الاختبار */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .exam-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        .exam-card h3 {
+            color: var(--brown);
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            border-bottom: 2px dashed var(--orange);
+            padding-bottom: 10px;
+        }
+
+        .exam-card p {
+            color: var(--black);
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            flex-grow: 1; /* لجعل الفقرة تأخذ المساحة المتاحة وتدفع الزر للأسفل */
+        }
+
+        .exam-card .start-button {
+            background-color: var(--orange);
+            color: var(--white);
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.15em;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            width: 80%; /* عرض الزر داخل البطاقة */
+            margin: 0 auto; /* توسيط الزر */
+        }
+
+        .exam-card .start-button:hover {
+            background-color: var(--brown);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .exams-header h1 {
+                font-size: 2.2em;
+                margin-bottom: 20px;
+            }
+
+            .exams-list {
+                padding: 20px 10px;
+                gap: 20px;
+            }
+
+            .exam-card {
+                width: 90%; /* عرض أكبر للبطاقة في الشاشات الصغيرة */
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="platform-title">منصة المبدأ التعليمية</h1>
+        <p class="platform-tagline">هذه المنصة خاصة بمادة التربية الإسلامية للصف الخامس الابتدائي</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html#home">الرئيسية</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">الوحدات الدراسية ▾</a>
+                <div class="dropdown-content">
+                    <div class="unit-section">
+                        <h4>الوحدة الأولى</h4>
+                        <a href="../units/unit1/lesson1.html">الدرس الأول</a>
+                        <a href="../units/unit1/lesson2.html">الدرس الثاني</a>
+                        <a href="../units/unit1/lesson3.html">الدرس الثالث</a>
+                        <a href="../units/unit1/lesson4.html">الدرس الرابع</a>
+                        <a href="../units/unit1/lesson5.html">الدرس الخامس</a>
+                    </div>
+                    <div class="unit-section">
+                        <h4>الوحدة الثانية</h4>
+                        <a href="../units/unit2/lesson1.html">الدرس الأول</a>
+                        <a href="../units/unit2/lesson2.html">الدرس الثاني</a>
+                        <a href="../units/unit2/lesson3.html">الدرس الثالث</a>
+                        <a href="../units/unit2/lesson4.html">الدرس الرابع</a>
+                        <a href="../units/unit2/lesson5.html">الدرس الخامس</a>
+                    </div>
+                    <div class="unit-section">
+                        <h4>الوحدة الثالثة</h4>
+                        <a href="../units/unit3/lesson1.html">الدرس الأول</a>
+                        <a href="../units/unit3/lesson2.html">الدرس الثاني</a>
+                        <a href="../units/unit3/lesson3.html">الدرس الثالث</a>
+                        <a href="../units/unit3/lesson4.html">الدرس الرابع</a>
+                        <a href="../units/unit3/lesson5.html">الدرس الخامس</a>
+                    </div>
+                    <div class="unit-section">
+                        <h4>الوحدة الرابعة</h4>
+                        <a href="../units/unit4/lesson1.html">الدرس الأول</a>
+                        <a href="../units/unit4/lesson2.html">الدرس الثاني</a>
+                        <a href="../units/unit4/lesson3.html">الدرس الثالث</a>
+                        <a href="../units/unit4/lesson4.html">الدرس الرابع</a>
+                        <a href="../units/unit4/lesson5.html">الدرس الخامس</a>
+                    </div>
+                    <div class="unit-section">
+                        <h4>الوحدة الخامسة</h4>
+                        <a href="../units/unit5/lesson1.html">الدرس الأول</a>
+                        <a href="../units/unit5/lesson2.html">الدرس الثاني</a>
+                        <a href="../units/unit5/lesson3.html">الدرس الثالث</a>
+                        <a href="../units/unit5/lesson4.html">الدرس الرابع</a>
+                        <a href="../units/unit5/lesson5.html">الدرس الخامس</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="index.html">الاختبارات</a></li> 
+            <li><a href="../index.html#register">التسجيل</a></li>
+            <li><a href="../index.html#login">تسجيل الدخول</a></li>
+            <li><a href="../index.html#contact">اتصل بنا</a></li>
+            <li><a href="../index.html#about">عن المنصة</a></li>
+            <li><a href="../index.html#videos">الفيديوهات التعليمية</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="exams-header">
+            <h1>الاختبارات المتاحة</h1>
+        </section>
+
+        <section class="exams-list">
+            <div class="exam-card">
+                <h3>اختبار الوحدة الأولى</h3>
+                <p>اختبار تفاعلي متعدد الخيارات لتقييم فهمك للوحدة الأولى من مادة التربية الإسلامية.</p>
+                <button class="start-button" onclick="location.href='unit1_quiz.html'">ابدأ الاختبار</button>
+            </div>
+
+            <div class="exam-card">
+                <h3>اختبار الوحدة الثانية</h3>
+                <p>اختبر معلوماتك في الوحدة الثانية باختبار موقوت، تحدى نفسك للإجابة في الوقت المحدد!</p>
+                <button class="start-button" onclick="location.href='unit2_quiz.html'">ابدأ الاختبار</button>
+            </div>
+
+            <div class="exam-card">
+                <h3>اختبار الوحدة الثالثة</h3>
+                <p>اختبار لقياس مدى حفظك للمفاهيم والمصطلحات الرئيسية في الوحدة الثالثة.</p>
+                <button class="start-button" onclick="location.href='unit3_quiz.html'">ابدأ الاختبار</button>
+            </div>
+
+            <div class="exam-card">
+                <h3>اختبار الوحدة الرابعة</h3>
+                <p>عبر عن فهمك للوحدة الرابعة من خلال الإجابة على أسئلة مقالية قصيرة.</p>
+                <button class="start-button" onclick="location.href='unit4_quiz.html'">ابدأ الاختبار</button>
+            </div>
+
+            <div class="exam-card">
+                <h3>اختبار الوحدة الخامسة</h3>
+                <p>اختبار شامل للوحدة الخامسة يتضمن أنواعاً مختلفة من الأسئلة.</p>
+                <button class="start-button" onclick="location.href='unit5_quiz.html'">ابدأ الاختبار</button>
+            </div>
+
+            </section>
+    </main>
+
+    <footer>
+        <p>إعداد وإشراف الأستاذ مرتضى الخفاجي</p>
+    </footer>
+
+</body>
+</html>

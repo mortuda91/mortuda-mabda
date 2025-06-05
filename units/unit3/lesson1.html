@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوحدة الثالثة: الدرس الأول - سورة المعارج - منصة المبدأ التعليمية</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        /* تنسيقات خاصة بصفحات الدروس لتحسين عرض المحتوى من الصور */
+        .lesson-content h2 {
+            text-align: center;
+            color: var(--brown);
+            font-size: 2.5em;
+            margin-bottom: 20px; /* تقليل المسافة بعد العنوان الرئيسي */
+            border-bottom: 3px solid var(--orange);
+            padding-bottom: 15px;
+            background-color: var(--light-green); /* خلفية خضراء فاتحة لعنوان الدرس */
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block; /* لجعل الخلفية تحيط بالنص فقط */
+            margin-right: auto;
+            margin-left: auto;
+            position: relative;
+            top: -10px; /* لرفعه قليلاً عن الهامش العلوي للقسم */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .lesson-content h3 {
+            color: var(--brown);
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            text-align: center; /* عنوان فرعي في المنتصف */
+            border-bottom: 2px solid var(--light-green);
+            padding-bottom: 10px;
+        }
+
+        .lesson-text-arabic {
+            font-family: 'Rakkas', serif; /* استخدام خط Rakkas للنص القرآني لجماله */
+            font-size: 1.8em; /* حجم كبير وواضح للنص القرآني */
+            line-height: 2; /* مسافة أسطر مناسبة للقراءة */
+            text-align: justify; /* محاذاة النص لكلا الجانبين */
+            color: var(--black);
+            background-color: #f9fff9; /* خلفية خضراء فاتحة جداً للنص القرآني */
+            border: 2px solid var(--light-green);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .bismillah {
+            font-family: 'Rakkas', serif; /* البسملة بخط Rakkas */
+            font-size: 2.8em;
+            text-align: center;
+            color: var(--brown);
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--orange); /* خط متقطع تحت البسملة */
+        }
+
+        .word-meaning-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .word-meaning-table th, .word-meaning-table td {
+            border: 1px solid var(--light-green);
+            padding: 12px 15px;
+            text-align: right;
+        }
+
+        .word-meaning-table th {
+            background-color: var(--orange);
+            color: var(--white);
+            font-weight: bold;
+            text-align: center; /* توسيط عناوين الجدول */
+        }
+
+        .word-meaning-table tr:nth-child(even) {
+            background-color: #f2fcf2; /* لون خلفية للصفوف الزوجية */
+        }
+
+        .word-meaning-table td:first-child {
+            font-weight: bold; /* جعل الكلمات في العمود الأول بولد */
+            color: var(--brown);
+        }
+
+        .question-answer-section {
+            background-color: #fcfcfc;
+            border: 2px solid var(--light-green);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .question-answer-section h3.quiz-title { /* تنسيق خاص لعنوان "المعنى العام وحل المناقشة" */
+            text-align: center;
+            color: var(--brown);
+            font-size: 2em;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            border-bottom: 3px solid var(--orange);
+            padding-bottom: 10px;
+        }
+
+        .question-answer-section p {
+            margin-bottom: 10px;
+            line-height: 1.8;
+            font-size: 1.15em;
+            color: var(--black);
+            text-align: justify; /* محاذاة النص لكلا الجانبين */
+        }
+
+        .question-answer-section p strong {
+            color: var(--brown); /* لون بني للسؤال (س: ) والجواب (جـ: ) */
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .question-answer-section p span.question-prefix {
+            color: var(--orange); /* لون برتقالي لرمز السؤال "س:" */
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .question-answer-section p span.answer-prefix {
+            color: var(--light-green); /* لون أخضر فاتح لرمز الجواب "جـ:" */
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        /* تنسيقات القوائم المرقمة والنقطية في الإجابات */
+        .question-answer-section ol {
+            list-style-type: decimal; /* ترقيم عادي 1, 2, 3... */
+            padding-right: 25px; /* مسافة لدفع الترقيم لليسار */
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .question-answer-section ol li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+            font-size: 1.1em;
+            color: var(--black);
+        }
+
+        /* الكلمات الملونة في المعنى العام */
+        .highlight-green-text {
+            color: var(--light-green);
+            font-weight: bold;
+        }
+        .highlight-orange-text {
+            color: var(--orange);
+            font-weight: bold;
+        }
+        .highlight-red-text {
+            color: #d9534f; /* لون أحمر */
+            font-weight: bold;
+        }
+
+
+        /* تنسيقات أزرار التنقل */
+        .lesson-navigation {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid var(--light-green);
+        }
+
+        .lesson-navigation button {
+            background-color: var(--orange);
+            color: var(--white);
+            border: none;
+            padding: 12px 25px;
+            margin: 0 15px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .lesson-navigation button:hover {
+            background-color: var(--brown);
+            transform: translateY(-2px);
+        }
+
+        .lesson-navigation button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="platform-title">منصة المبدأ التعليمية</h1>
+        <p class="platform-tagline">هذه المنصة خاصة بمادة التربية الإسلامية للصف الخامس الابتدائي</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../../index.html#home">الرئيسية</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">الوحدات الدراسية ▾</a>
+                <div class="dropdown-content">
+                    <div class="unit-section">
+                        <h4>الوحدة الأولى</h4>
+                        <a href="../unit1/lesson1.html">الدرس الأول</a>
+                        <a href="../unit1/lesson2.html">الدرس الثاني</a>
+                        <a href="../unit1/lesson3.html">الدرس الثالث</a>
+                        <a href="../unit1/lesson4.html">الدرس الرابع</a>
+                        <a href="../unit1/lesson5.html">الدرس الخامس</a>
+                    </div>
+                    <div class="unit-section">
+                        <h4>الوحدة الثانية</h4>
+                        <a href="../unit2/lesson1.html">الدرس الأول</a>
+                        <a href="../unit2/lesson2.html">الدرس الثاني</a>
+                        <a href="../unit2/lesson3.html">الدرس الثالث</a>
+                        <a href="../unit2/lesson4.html">الدرس الرابع</a>
+                        <a href="../unit2/lesson5.html">الدرس الخامس</a>
+                    </div>
+                    <div class="unit-section">
+                        <h4>الوحدة الثالثة</h4>
+                        <a href="lesson1.html">الدرس الأول</a>
+                        <a href="lesson2.html">الدرس الثاني</a>
+                        <a href="lesson3.html">الدرس الثالث</a>
+                        <a href="lesson4.html">الدرس الرابع</a>
+                        <a href="lesson5.html">الدرس الخامس</a>
+                    </div>
+                     <div class="unit-section">
+                        <h4>الوحدة الرابعة</h4>
+                        <a href="../../units/unit4/lesson1.html">الدرس الأول</a>
+                        <a href="../../units/unit4/lesson2.html">الدرس الثاني</a>
+                        <a href="../../units/unit4/lesson3.html">الدرس الثالث</a>
+                        <a href="../../units/unit4/lesson4.html">الدرس الرابع</a>
+                        <a href="../../units/unit4/lesson5.html">الدرس الخامس</a>
+                    </div>
+                     <div class="unit-section">
+                        <h4>الوحدة الخامسة</h4>
+                        <a href="../../units/unit5/lesson1.html">الدرس الأول</a>
+                        <a href="../../units/unit5/lesson2.html">الدرس الثاني</a>
+                        <a href="../../units/unit5/lesson3.html">الدرس الثالث</a>
+                        <a href="../../units/unit5/lesson4.html">الدرس الرابع</a>
+                        <a href="../../units/unit5/lesson5.html">الدرس الخامس</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="../../index.html#exams">الاختبارات</a></li>
+            <li><a href="../../index.html#register">التسجيل</a></li>
+            <li><a href="../../index.html#login">تسجيل الدخول</a></li>
+            <li><a href="../../index.html#contact">اتصل بنا</a></li>
+            <li><a href="../../index.html#about">عن المنصة</a></li>
+            <li><a href="../../index.html#videos">الفيديوهات التعليمية</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="lesson-content">
+            <h2>الوحدة الثالثة</h2>
+            <h3>الدرس الأول : من سورة المعارج</h3>
+
+            <p class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+
+            <div class="lesson-text-arabic">
+                <p>سَأَلَ سَائِلٌ بِعَذَابٍ وَاقِعٍ ﴿1﴾ لِلْكَافِرِينَ لَيْسَ لَهُ دَافِعٌ ﴿2﴾ مِنَ اللَّهِ ذِي الْمَعَارِجِ ﴿3﴾ تَعْرُجُ الْمَلَائِكَةُ وَالرُّوحُ إِلَيْهِ فِي يَوْمٍ كَانَ مِقْدَارُهُ خَمْسِينَ أَلْفَ سَنَةٍ ﴿4﴾ فَاصْبِرْ صَبْرًا جَمِيلًا ﴿5﴾ إِنَّهُمْ يَرَوْنَهُ بَعِيدًا ﴿6﴾ وَنَرَاهُ قَرِيبًا ﴿7﴾ يَوْمَ تَكُونُ السَّمَاءُ كَالْمُهْلِ ﴿8﴾ وَتَكُونُ الْجِبَالُ كَالْعِهْنِ ﴿9﴾ وَلَا يَسْأَلُ حَمِيمٌ حَمِيمًا ﴿10﴾ يُبَصَّرُونَهُمْ يَوَدُّ الْمُجْرِمُ لَوْ يُفْتَدِي مِنْ عَذَابِ يَوْمِئِذٍ بِبَنِيهِ ﴿11﴾ وَصَاحِبَتِهِ وَأَخِيهِ ﴿12﴾ وَفَصِيلَتِهِ الَّتِي تُؤْوِيهِ ﴿13﴾ وَمَنْ فِي الْأَرْضِ جَمِيعًا ثُمَّ يُنْجِيهِ ﴿14﴾ كَلَّا إِنَّهَا لَظَىٰ ﴿15﴾ نَزَّاعَةً لِلشَّوَىٰ ﴿16﴾ تَدْعُو مَنْ أَدْبَرَ وَتَوَلَّىٰ ﴿17﴾ وَجَمَعَ فَأَوْعَىٰ ﴿18﴾ إِنَّ الْإِنْسَانَ خُلِقَ هَلُوعًا ﴿19﴾ إِذَا مَسَّهُ الشَّرُّ جَزُوعًا ﴿20﴾ وَإِذَا مَسَّهُ الْخَيْرُ مَنُوعًا ﴿21﴾ إِلَّا الْمُصَلِّينَ ﴿22﴾ الَّذِينَ هُمْ عَلَىٰ صَلَاتِهِمْ دَائِمُونَ ﴿23﴾ وَالَّذِينَ فِي أَمْوَالِهِمْ حَقٌّ مَعْلُومٌ ﴿24﴾ لِلسَّائِلِ وَالْمَحْرُومِ ﴿25﴾ وَالَّذِينَ يُصَدِّقُونَ بِيَوْمِ الدِّينِ ﴿26﴾ وَالَّذِينَ هُمْ مِنْ عَذَابِ رَبِّهِمْ مُشْفِقُونَ ﴿27﴾ إِنَّ عَذَابَ رَبِّهِمْ غَيْرُ مَأْمُونٍ ﴿28﴾ وَالَّذِينَ هُمْ لِفُرُوجِهِمْ حَافِظُونَ ﴿29﴾ إِلَّا عَلَىٰ أَزْوَاجِهِمْ أَوْ مَا مَلَكَتْ أَيْمَانُهُمْ فَإِنَّهُمْ غَيْرُ مَلُومِينَ ﴿30﴾ فَمَنِ ابْتَغَىٰ وَرَاءَ ذَٰلِكَ فَأُولَٰئِكَ هُمُ الْعَادُونَ ﴿31﴾ وَالَّذِينَ هُمْ لِأَمَانَاتِهِمْ وَعَهْدِهِمْ رَاعُونَ ﴿32﴾ وَالَّذِينَ هُمْ بِشَهَادَاتِهِمْ قَائِمُونَ ﴿33﴾ وَالَّذِينَ هُمْ عَلَىٰ صَلَاتِهِمْ يُحَافِظُونَ ﴿34﴾ أُولَٰئِكَ فِي جَنَّاتٍ مُكْرَمُونَ ﴿35﴾</p>
+            </div>
+
+            <h3>معاني المفردات</h3>
+            <table class="word-meaning-table">
+                <thead>
+                    <tr>
+                        <th>الكلمة</th>
+                        <th>معناها</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>هلوعا</td>
+                        <td>شديد الحرص</td>
+                    </tr>
+                    <tr>
+                        <td>جزوعا</td>
+                        <td>غير صبور</td>
+                    </tr>
+                    <tr>
+                        <td>منوعا</td>
+                        <td>بخيلاً مانعاً للخير</td>
+                    </tr>
+                    <tr>
+                        <td>مشفقون</td>
+                        <td>خائفون</td>
+                    </tr>
+                    <tr>
+                        <td>لأماناتهم وعهدهم راعون</td>
+                        <td>حافظون لعهودهم وأماناتهم</td>
+                    </tr>
+                    <tr>
+                        <td>وبشهاداتهم قائمون</td>
+                        <td>يشهدون بالحق</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="quiz-title">المعنى العام وحل المناقشة</h3>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س:</span> أين الأعمال الكريمة التالية:</p>
+                <p><span class="answer-prefix">جـ:</span></p>
+                <ul>
+                    <li>(قال تعالى: <span class="highlight-green-text">إن الإنسان خلق هلوعاً إذا مسه الشر جزوعاً وإذا مسه الخير منوعاً</span>)</li>
+                    <li>(إلا <span class="highlight-orange-text">المصلين</span> * <span class="highlight-red-text">والذين هم صلاتهم دائمون</span> * <span class="highlight-green-text">والذين في أموالهم حق معلوم * للسائل والمحروم</span>)</li>
+                </ul>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س:</span> اذكرت الآية الكريمة عدداً من صفات الإنسان السيء، عددها؟</p>
+                <p><span class="answer-prefix">جـ:</span> <span class="highlight-green-text">١- الإنسان السيء</span> وهو الذي يتضجر ويجزع إذا واجهته مشكلة في الحياة ولا يصبر عليها.</p>
+                <p><span class="highlight-green-text">٢- إذا رزقه الله خيراً من مال أو غيره اشتد حرصه عليه ولم ينفق منه فلا يشكر الله على نعمه.</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س:</span> ماذا أعد الله تعالى لعباده المؤمنين؟</p>
+                <p><span class="answer-prefix">جـ:</span> أعد الله لهم جنات تجري من تحتها الأنهار خالدين فيها.</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س:</span> ما هي صفات المؤمنين؟</p>
+                <p><span class="answer-prefix">جـ:</span></p>
+                <ol>
+                    <li>الإيمان بالله تعالى ورسله وكتبه.</li>
+                    <li>الذين يحافظون على صلاتهم.</li>
+                    <li>الذين يجعلون قسماً من أموالهم لأعمال الخير ومساعدة الفقراء والمحتاجين.</li>
+                    <li>الذين يصدقون بيوم القيامة.</li>
+                    <li>الذين يخافون الله تعالى في الغيب ولا يعصونه ولا يفعلون الأعمال المحرمة التي يعاقب الله عليها.</li>
+                    <li>الذين يحافظون على الأمانات ويحافظون على العهود والمواثيق.</li>
+                    <li>الذين يشهدون بالحق والصدق ولا يكتمون في شهادتهم.</li>
+                </ol>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س:</span> ماذا تعلمنا الآيات الكريمة؟</p>
+                <p><span class="answer-prefix">جـ:</span></p>
+                <ol>
+                    <li>تعلمنا على أهمية الصبر على مصائب الحياة.</li>
+                    <li>وجوب شكر الله تعالى على نعمه.</li>
+                    <li>الالتزام بمكارم الأخلاق وحسن التعامل مع الناس.</li>
+                    <li>يحذرنا من عقابه وعذابه.</li>
+                </ol>
+            </div>
+
+        </section>
+
+        <div class="lesson-navigation">
+            <button onclick="location.href='../unit2/lesson5.html'">الدرس السابق</button>
+            <button onclick="location.href='../../index.html#units'">العودة للوحدات</button>
+            <button onclick="location.href='lesson2.html'">الدرس التالي</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>إعداد وإشراف الأستاذ مرتضى الخفاجي</p>
+    </footer>
+
+    </body>
+</html>

@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوحدة الثانية: الدرس الأول - سورة القلم - منصة المبدأ التعليمية</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        /* تنسيقات خاصة بصفحات الدروس لتحسين عرض المحتوى من الصور */
+        .lesson-content h2 {
+            text-align: center;
+            color: var(--brown);
+            font-size: 2.5em;
+            margin-bottom: 20px; /* تقليل المسافة بعد العنوان الرئيسي */
+            border-bottom: 3px solid var(--orange);
+            padding-bottom: 15px;
+            background-color: var(--light-green); /* خلفية خضراء فاتحة لعنوان الدرس */
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block; /* لجعل الخلفية تحيط بالنص فقط */
+            margin-right: auto;
+            margin-left: auto;
+            position: relative;
+            top: -10px; /* لرفعه قليلاً عن الهامش العلوي للقسم */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .lesson-content h3 {
+            color: var(--brown);
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            text-align: center; /* عنوان فرعي في المنتصف */
+            border-bottom: 2px solid var(--light-green);
+            padding-bottom: 10px;
+        }
+
+        .lesson-text-arabic {
+            font-family: 'Rakkas', serif; /* استخدام خط Rakkas للنص القرآني لجماله */
+            font-size: 2.2em; /* حجم كبير وواضح للنص القرآني */
+            line-height: 2; /* مسافة أسطر مناسبة للقراءة */
+            text-align: justify; /* محاذاة النص لكلا الجانبين */
+            color: var(--black);
+            background-color: #f9fff9; /* خلفية خضراء فاتحة جداً للنص القرآني */
+            border: 2px solid var(--light-green);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .bismillah {
+            font-family: 'Rakkas', serif; /* البسملة بخط Rakkas */
+            font-size: 2.8em;
+            text-align: center;
+            color: var(--brown);
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--orange); /* خط متقطع تحت البسملة */
+        }
+
+        .word-meaning-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .word-meaning-table th, .word-meaning-table td {
+            border: 1px solid var(--light-green);
+            padding: 12px 15px;
+            text-align: right;
+        }
+
+        .word-meaning-table th {
+            background-color: var(--orange);
+            color: var(--white);
+            font-weight: bold;
+            text-align: center; /* توسيط عناوين الجدول */
+        }
+
+        .word-meaning-table tr:nth-child(even) {
+            background-color: #f2fcf2; /* لون خلفية للصفوف الزوجية */
+        }
+
+        .word-meaning-table td:first-child {
+            font-weight: bold; /* جعل الكلمات في العمود الأول بولد */
+            color: var(--brown);
+        }
+
+        .question-answer-section {
+            background-color: #fcfcfc;
+            border: 2px solid var(--light-green);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .question-answer-section h3.quiz-title { /* تنسيق خاص لعنوان "المعنى العام وحل المناقشة" */
+            text-align: center;
+            color: var(--brown);
+            font-size: 2em;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            border-bottom: 3px solid var(--orange);
+            padding-bottom: 10px;
+        }
+
+        .question-answer-section p {
+            margin-bottom: 10px;
+            line-height: 1.8;
+            font-size: 1.15em;
+            color: var(--black);
+            text-align: justify; /* محاذاة النص لكلا الجانبين */
+        }
+
+        .question-answer-section p strong {
+            color: var(--brown); /* لون بني للسؤال (س: ) والجواب (جـ: ) */
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .question-answer-section p span.question-prefix {
+            color: var(--orange); /* لون برتقالي لرمز السؤال "س:" */
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .question-answer-section p span.answer-prefix {
+            color: var(--light-green); /* لون أخضر فاتح لرمز الجواب "جـ:" */
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        /* تنسيقات أزرار التنقل */
+        .lesson-navigation {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid var(--light-green);
+        }
+
+        .lesson-navigation button {
+            background-color: var(--orange);
+            color: var(--white);
+            border: none;
+            padding: 12px 25px;
+            margin: 0 15px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .lesson-navigation button:hover {
+            background-color: var(--brown);
+            transform: translateY(-2px);
+        }
+
+        .lesson-navigation button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="platform-title">منصة المبدأ التعليمية</h1>
+        <p class="platform-tagline">هذه المنصة خاصة بمادة التربية الإسلامية للصف الخامس الابتدائي</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../../index.html#home">الرئيسية</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">الوحدات الدراسية ▾</a>
+                <div class="dropdown-content">
+                    <div class="unit-section">
+                        <h4>الوحدة الأولى</h4>
+                        <a href="../unit1/lesson1.html">الدرس الأول</a>
+                        <a href="../unit1/lesson2.html">الدرس الثاني</a>
+                        <a href="../unit1/lesson3.html">الدرس الثالث</a>
+                        <a href="../unit1/lesson4.html">الدرس الرابع</a>
+                        <a href="../unit1/lesson5.html">الدرس الخامس</a>
+                    </div>
+                    <div class="unit-section">
+                        <h4>الوحدة الثانية</h4>
+                        <a href="lesson1.html">الدرس الأول</a>
+                        <a href="lesson2.html">الدرس الثاني</a>
+                        <a href="lesson3.html">الدرس الثالث</a>
+                        <a href="lesson4.html">الدرس الرابع</a>
+                        <a href="lesson5.html">الدرس الخامس</a>
+                    </div>
+                    <div class="unit-section">
+                        <h4>الوحدة الثالثة</h4>
+                        <a href="../../units/unit3/lesson1.html">الدرس الأول</a>
+                        <a href="../../units/unit3/lesson2.html">الدرس الثاني</a>
+                        <a href="../../units/unit3/lesson3.html">الدرس الثالث</a>
+                        <a href="../../units/unit3/lesson4.html">الدرس الرابع</a>
+                        <a href="../../units/unit3/lesson5.html">الدرس الخامس</a>
+                    </div>
+                     <div class="unit-section">
+                        <h4>الوحدة الرابعة</h4>
+                        <a href="../../units/unit4/lesson1.html">الدرس الأول</a>
+                        <a href="../../units/unit4/lesson2.html">الدرس الثاني</a>
+                        <a href="../../units/unit4/lesson3.html">الدرس الثالث</a>
+                        <a href="../../units/unit4/lesson4.html">الدرس الرابع</a>
+                        <a href="../../units/unit4/lesson5.html">الدرس الخامس</a>
+                    </div>
+                     <div class="unit-section">
+                        <h4>الوحدة الخامسة</h4>
+                        <a href="../../units/unit5/lesson1.html">الدرس الأول</a>
+                        <a href="../../units/unit5/lesson2.html">الدرس الثاني</a>
+                        <a href="../../units/unit5/lesson3.html">الدرس الثالث</a>
+                        <a href="../../units/unit5/lesson4.html">الدرس الرابع</a>
+                        <a href="../../units/unit5/lesson5.html">الدرس الخامس</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="../../index.html#exams">الاختبارات</a></li>
+            <li><a href="../../index.html#register">التسجيل</a></li>
+            <li><a href="../../index.html#login">تسجيل الدخول</a></li>
+            <li><a href="../../index.html#contact">اتصل بنا</a></li>
+            <li><a href="../../index.html#about">عن المنصة</a></li>
+            <li><a href="../../index.html#videos">الفيديوهات التعليمية</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="lesson-content">
+            <h2>الوحدة الثانية</h2>
+            <h3>الدرس الأول : من سورة القلم</h3>
+
+            <p class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+
+            <div class="lesson-text-arabic">
+                <p>ن وَالْقَلَمِ وَمَا يَسْطُرُونَ (1) مَا أَنْتَ بِنِعْمَةِ رَبِّكَ بِمَجْنُونٍ (2) وَإِنَّ لَكَ لَأَجْرًا غَيْرَ مَمْنُونٍ (3) وَإِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍ (4) فَسَتُبْصِرُ وَيُبْصِرُونَ (5) بِأَيِّيكُمُ الْمَفْتُونُ (6) إِنَّ رَبَّكَ هُوَ أَعْلَمُ بِمَنْ ضَلَّ عَنْ سَبِيلِهِ وَهُوَ أَعْلَمُ بِالْمُهْتَدِينَ (7) فَلَا تُطِعِ الْمُكَذِّبِينَ (8) وَدُّوا لَوْ تُدْهِنُ فَيُدْهِنُونَ (9) وَلَا تُطِعْ كُلَّ حَلَّافٍ مَهِينٍ (10) هَمَّازٍ مَشَّاءٍ بِنَمِيمٍ (11) مَنَّاعٍ لِلْخَيْرِ مُعْتَدٍ أَثِيمٍ (12) عُتُلٍّ بَعْدَ ذَٰلِكَ زَنِيمٍ (13) أَنْ كَانَ ذَا مَالٍ وَبَنِينَ (14) إِذَا تُتْلَىٰ عَلَيْهِ آيَاتُنَا قَالَ أَسَاطِيرُ الْأَوَّلِينَ (15)</p>
+            </div>
+
+            <h3>معاني المفردات</h3>
+            <table class="word-meaning-table">
+                <thead>
+                    <tr>
+                        <th>الكلمة</th>
+                        <th>معناها</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ما يسطرون</td>
+                        <td>ما يكتبون في السطور</td>
+                    </tr>
+                    <tr>
+                        <td>ما أنت بنعمة ربك بمجنون</td>
+                        <td>لست مجنوناً يا محمد كما يقول الكفار وذلك لنبي الله بفضله ونعمته عليك</td>
+                    </tr>
+                    <tr>
+                        <td>لأجراً غير ممنون</td>
+                        <td>أجراً مستحقاً من الله وثواباً لك يا محمد (ص)</td>
+                    </tr>
+                    <tr>
+                        <td>وإنك لعلى خلق عظيم</td>
+                        <td>إن أخلاقك عظيمة يا محمد (ص)</td>
+                    </tr>
+                    <tr>
+                        <td>بأيكم المفتون</td>
+                        <td>سترى يا رسول الله وسيرى الكفار من هو مجنون</td>
+                    </tr>
+                    <tr>
+                        <td>لو تدهن</td>
+                        <td>لو تتنازل عن بعض دينك</td>
+                    </tr>
+                    <tr>
+                        <td>فيدهنون</td>
+                        <td>فيقربون منك</td>
+                    </tr>
+                    <tr>
+                        <td>حلاف مهين</td>
+                        <td>يحلف بالكذب والباطل كثيراً</td>
+                    </tr>
+                    <tr>
+                        <td>هماز</td>
+                        <td>من يكثر الناس وذمهم</td>
+                    </tr>
+                    <tr>
+                        <td>مشاء بنميم</td>
+                        <td>ينقل الكلام بين الناس ليوقع الفتنة بينهم</td>
+                    </tr>
+                    <tr>
+                        <td>عتل</td>
+                        <td>سيئ الخلق والطباع</td>
+                    </tr>
+                    <tr>
+                        <td>أساطير الأولين</td>
+                        <td>أكاذيب الشعوب القديمة</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="quiz-title">المعنى العام وحل المناقشة</h3>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س:</span> بماذا أقسم الله تعالى في هذه السورة ؟</p>
+                <p><span class="answer-prefix">جـ:</span> أقسم الله بالقلم والكتابة التي علم بها البشر .</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س:</span> وصف الله تعالى خلق النبي (ص) فماذا قال فيه ؟</p>
+                <p><span class="answer-prefix">جـ:</span> إنه خلق عظيم في خلقك وقولك وفعلك وإنك تستحق الأجر الدائم من الله سبحانه .</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س:</span> ما الذي قاله الكافرون عن رسول الله (ص) ؟</p>
+                <p><span class="answer-prefix">جـ:</span> قالوا عن النبي محمد (ص) إنه مجنون لأنهم كذبوا النبي ولم يصدقوه .</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س:</span> كيف رد الله تعالى على الكافرين ؟</p>
+                <p><span class="answer-prefix">جـ:</span> إن الله أقسم بالقلم والكتابة أن محمداً ليس مجنوناً .</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س:</span> ما الذي يريده الكافرون من النبي محمد (ص) ؟</p>
+                <p><span class="answer-prefix">جـ:</span> يريدون أن يتنازل عن بعض دينه كي يقتربون منه .</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س:</span> ما الأعمال السيئة التي اتصف بها الكفار ؟</p>
+                <p><span class="answer-prefix">جـ:</span> إن هؤلاء الكافرين أخلاقهم سيئة يحلفون كثيراً والكلامهم كاذبون ويتحدثون بالسوء عن الناس ويحدثون الفتنة بين الناس والعداوة بينهم ويمنعون الخير .</p>
+            </div>
+
+            <div class="question-answer-section">
+                <p><span class="question-prefix">س:</span> ما معنى كل من هماز ومشاء نميم ؟</p>
+                <p><span class="answer-prefix">جـ:</span> الهماز : هو الذي يغتاب الناس كثيراً ويذمهم بالسوء .</p>
+                <p>مشاء النميم : وهو كثير النميمة بين الناس كي يوقع الفتنة بينهم .</p>
+            </div>
+
+        </section>
+
+        <div class="lesson-navigation">
+            <button onclick="location.href='../unit1/lesson5.html'">الدرس السابق</button>
+            <button onclick="location.href='../../index.html#units'">العودة للوحدات</button>
+            <button onclick="location.href='lesson2.html'">الدرس التالي</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>إعداد وإشراف الأستاذ مرتضى الخفاجي</p>
+    </footer>
+
+    </body>
+</html>

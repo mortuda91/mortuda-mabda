@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوحدة الخامسة: الدرس الثاني - من أسماء الله الحسنى - منصة المبدأ التعليمية</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        /* تنسيقات خاصة بصفحات الدروس لتحسين عرض المحتوى من الصور */
+        .lesson-content h2 {
+            text-align: center;
+            color: var(--brown);
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid var(--orange);
+            padding-bottom: 15px;
+            background-color: var(--light-green); /* خلفية خضراء فاتحة لعنوان الدرس */
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-right: auto;
+            margin-left: auto;
+            position: relative;
+            top: -10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-subtitle { /* لعنوان "من أسماء الله الحسنى" */
+            color: var(--brown);
+            font-size: 2em;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--light-green);
+            padding-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .main-instruction {
+            font-size: 1.3em;
+            color: var(--orange);
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .names-list {
+            list-style-type: none; /* إزالة النقاط الافتراضية */
+            padding-right: 0; /* إزالة المسافة البادئة الافتراضية للقائمة */
+            margin-top: 20px;
+        }
+
+        .names-list li {
+            font-size: 1.2em;
+            line-height: 2;
+            color: var(--black);
+            margin-bottom: 15px;
+            position: relative;
+            padding-right: 30px; /* مسافة للنقطة المخصصة */
+            text-align: justify;
+        }
+
+        .names-list li::before {
+            content: counter(list-item) " "; /* عرض رقم النقطة */
+            counter-increment: list-item;
+            color: var(--orange); /* لون الرقم */
+            font-weight: bold;
+            font-size: 1.1em;
+            display: inline-block;
+            width: 2em; /* لتوسيط الرقم */
+            margin-right: -2.5em; /* لتقريب النص من الرقم */
+            position: absolute;
+            right: 0;
+            top: 0;
+            text-align: center;
+        }
+
+        .names-list li span.name-highlight {
+            color: var(--light-green);
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        /* تنسيقات أزرار التنقل */
+        .lesson-navigation {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid var(--light-green);
+        }
+
+        .lesson-navigation button {
+            background-color: var(--orange);
+            color: var(--white);
+            border: none;
+            padding: 12px 25px;
+            margin: 0 15px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .lesson-navigation button:hover {
+            background-color: var(--brown);
+            transform: translateY(-2px);
+        }
+
+        .lesson-navigation button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="platform-title">منصة المبدأ التعليمية</h1>
+        <p class="platform-tagline">هذه المنصة خاصة بمادة التربية الإسلامية للصف الخامس الابتدائي</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../../index.html#home">الرئيسية</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">الوحدات الدراسية ▾</a>
+                <div class="dropdown-content">
+                    <div class="unit-section">
+                        <h4>الوحدة الأولى</h4>
+                        <a href="../unit1/lesson1.html">الدرس الأول</a>
+                        <a href="../unit1/lesson2.html">الدرس الثاني</a>
+                        <a href="../unit1/lesson3.html">الدرس الثالث</a>
+                        <a href="../unit1/lesson4.html">الدرس الرابع</a>
+                        <a href="../unit1/lesson5.html">الدرس الخامس</a>
+                    </div>
+                    <div class="unit-section">
+                        <h4>الوحدة الثانية</h4>
+                        <a href="../unit2/lesson1.html">الدرس الأول</a>
+                        <a href="../unit2/lesson2.html">الدرس الثاني</a>
+                        <a href="../unit2/lesson3.html">الدرس الثالث</a>
+                        <a href="../unit2/lesson4.html">الدرس الرابع</a>
+                        <a href="../unit2/lesson5.html">الدرس الخامس</a>
+                    </div>
+                    <div class="unit-section">
+                        <h4>الوحدة الثالثة</h4>
+                        <a href="../unit3/lesson1.html">الدرس الأول</a>
+                        <a href="../unit3/lesson2.html">الدرس الثاني</a>
+                        <a href="../unit3/lesson3.html">الدرس الثالث</a>
+                        <a href="../unit3/lesson4.html">الدرس الرابع</a>
+                        <a href="../unit3/lesson5.html">الدرس الخامس</a>
+                    </div>
+                    <div class="unit-section">
+                        <h4>الوحدة الرابعة</h4>
+                        <a href="../unit4/lesson1.html">الدرس الأول</a>
+                        <a href="../unit4/lesson2.html">الدرس الثاني</a>
+                        <a href="../unit4/lesson3.html">الدرس الثالث</a>
+                        <a href="../unit4/lesson4.html">الدرس الرابع</a>
+                        <a href="../unit4/lesson5.html">الدرس الخامس</a>
+                    </div>
+                    <div class="unit-section">
+                        <h4>الوحدة الخامسة</h4>
+                        <a href="lesson1.html">الدرس الأول</a>
+                        <a href="lesson2.html">الدرس الثاني</a>
+                        <a href="lesson3.html">الدرس الثالث</a>
+                        <a href="lesson4.html">الدرس الرابع</a>
+                        <a href="lesson5.html">الدرس الخامس</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="../../index.html#exams">الاختبارات</a></li>
+            <li><a href="../../index.html#register">التسجيل</a></li>
+            <li><a href="../../index.html#login">تسجيل الدخول</a></li>
+            <li><a href="../../index.html#contact">اتصل بنا</a></li>
+            <li><a href="../../index.html#about">عن المنصة</a></li>
+            <li><a href="../../index.html#videos">الفيديوهات التعليمية</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="lesson-content">
+            <h2>الدرس الثاني : من العقيدة الإسلامية</h2>
+            <h3 class="section-subtitle">من أسماء الله الحسنى</h3>
+
+            <p class="main-instruction">اذكر ستة من أسماء الله الحسنى وبين معانيها.</p>
+
+            <ol class="names-list">
+                <li><span class="name-highlight">1- الملك :</span> ومعناه أن الملك هو (تعالى قد الملك الحق لا إله إلا هو رب العرش الكريم) .</li>
+                <li><span class="name-highlight">2- الودود :</span> المحب الذي يقول تعالى (واستغفروا ربكم ثم توبوا إليه أن ربي رحيم ودود) .</li>
+                <li><span class="name-highlight">3- المنتقم :</span> بكره يكره الجريمة والكافر ويعاقب المجرمين والظالمين والكافرين بالله .</li>
+                <li><span class="name-highlight">4- المؤمن :</span> ومعناه أن الله تعالى مصدر الأمن والأمان في هذا العالم .</li>
+                <li><span class="name-highlight">5- الوهاب :</span> ومعناه أن الله كثير العطاء للخلق من غير عوض منهم حيث قال تعالى (ربنا لا تزغ قلوبنا بعد إذ هديتنا وهب لنا من لدنك رحمة إنك أنت الوهاب) .</li>
+                <li><span class="name-highlight">6- الشكور :</span> ومعناه أن الله يشكر الناس العالهم الخبرة وطاعتهم له حيث قال سبحانه (وإذ شكر حليم) .</li>
+            </ol>
+
+        </section>
+
+        <div class="lesson-navigation">
+            <button onclick="location.href='lesson1.html'">الدرس السابق</button>
+            <button onclick="location.href='../../index.html#units'">العودة للوحدات</button>
+            <button onclick="location.href='lesson3.html'">الدرس التالي</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>إعداد وإشراف الأستاذ مرتضى الخفاجي</p>
+    </footer>
+
+    </body>
+</html>
